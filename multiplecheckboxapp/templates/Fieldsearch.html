@@ -1,0 +1,3710 @@
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keyword" content="www.anydegre.com">
+    <meta name="description" content="www.anydegre.com">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title></title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+ 
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link href="vendors/flatpickr/flatpickr.min.css" rel="stylesheet">
+    <link href="vendors/dropzone/dropzone.min.css" rel="stylesheet">
+    <link href="vendors/prism/prism-okaidia.css" rel="stylesheet">
+    <link href="vendors/choices/choices.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
+    <link href="static/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="static/css/theme.min.css" rel="stylesheet" id="style-default">
+    <link href="static/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link href="static/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="static/css/fSelect.css" rel="stylesheet">
+    <script>
+      var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+      if (isRTL) {
+        var linkDefault = document.getElementById('style-default');
+        var userLinkDefault = document.getElementById('user-style-default');
+        linkDefault.setAttribute('disabled', true);
+        userLinkDefault.setAttribute('disabled', true);
+        document.querySelector('html').setAttribute('dir', 'rtl');
+      } else {
+        var linkRTL = document.getElementById('style-rtl');
+        var userLinkRTL = document.getElementById('user-style-rtl');
+        linkRTL.setAttribute('disabled', true);
+        userLinkRTL.setAttribute('disabled', true);
+      }
+    </script>
+    <style>
+      #job_card:hover{
+       background-color: #fafafa;
+    
+      }
+      .fs-wrap {
+        display: inline-block;
+        cursor: pointer;
+        line-height: 1.5;
+        width: 100% !important;
+    }
+      .fs-dropdown .fs-options {
+      max-height: 105px;
+      overflow: auto;
+      }
+      #hi:hover{
+        background-color: #ff8a00 !important;
+        color: #fff !important;
+      }
+      .blink_me {
+        animation: blinker 1s linear infinite;
+      }
+      
+      @keyframes blinker {  
+        50% { opacity: 0; }
+      }
+      #vpb:hover{
+        background-color: #5271ff !important;
+        color: #fff !important;
+      }
+      #hi1:hover{
+        
+        color: #fff !important;
+      }
+      #tokenfield::placeholder {
+        font-size: 16px;
+        line-height: 3;
+    }
+    .gift:hover{
+      color: black !important;
+    }
+    div.pager {
+      text-align: center;
+      margin: 1em 0;
+    
+  }
+  
+  div.pager span {
+      display: inline-block;
+      width: 1.8em;
+      height: 1.8em;
+      line-height: 1.8;
+      text-align: center;
+      cursor: pointer;
+      background: #fff;
+      color: #000;
+      margin-right: 0.5em;
+       
+      border-radius: .2rem;
+      border-color: var(--falcon-btn-falcon-background);
+      box-shadow: var(--falcon-btn-falcon-box-shadow);
+  }
+  
+  div.pager span.active {
+      background: #5271ff;
+      color: #fff;
+  }
+    </style>
+    <style>
+      .theme-wiz .nav-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+        color: var(--falcon-600);
+        display: block;
+      }
+      .theme-wiz .nav-link .nav-item-circle {
+        color: var(--falcon-500);
+        background-color: var(--falcon-theme-wizard-nav-item-circle-bg);
+        border: 2px solid var(--falcon-300);
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        line-height: 2.25rem;
+        padding: 0;
+        text-align: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        display: block;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+      .theme-wiz .nav-link.active {
+        color: #2c7be5;
+      }
+      .theme-wiz .nav-link.active .nav-item-circle {
+        background-color: #2c7be5 !important;
+        color: #fff;
+        border-color: #2c7be5;
+      }
+      .theme-wiz .nav-link.done {
+        color: #00d27a;
+      }
+      .theme-wiz .nav-link.done .nav-item-circle {
+        background-color: #00d27a !important;
+        color: #fff;
+        border-color: #00d27a;
+      }
+      .theme-wiz .nav-link.done .nav-item-circle .check-icon {
+        display: inline-block;
+      }
+      .theme-wiz .nav-link.done .nav-item-circle-parent:before {
+        background-color: #00d27a;
+      }
+      .theme-wiz .nav-link .nav-item-circle .check-icon {
+        display: none;
+      }
+      .theme-wiz .nav-link .nav-item-circle-parent {
+        display: block;
+      }
+      .theme-wiz .nav-link .nav-item-circle-parent:before {
+        content: "";
+        height: 2px;
+        width: 101%;
+        position: absolute;
+        left: 51%;
+        top: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        background: var(--falcon-300);
+      }
+      .theme-wiz .nav-item:not(:first-child) .active .nav-item-circle-parent:after {
+        content: "";
+        width: 50%;
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        height: 2px;
+        background-color: #00d27a;
+      }
+      .theme-wiz .nav-item-circle-parent {
+        position: relative;
+        padding: 0 1rem;
+      }
+      .theme-wiz .nav-item-circle {
+        margin: 0 auto;
+        z-index: 1;
+        position: relative;
+      }
+      .theme-wiz .nav-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .theme-wiz .nav-item:first-child .nav-item-circle-parent:before, .theme-wiz .nav-item:last-child .nav-item-circle-parent:before {
+        width: 50%;
+      }
+      .theme-wiz .nav-item:first-child .nav-item-circle-parent:before {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+      }
+      .theme-wiz .nav-item:last-child .nav-item-circle-parent:before {
+        left: 0;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+      }
+      .theme-wiz .pager {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .theme-wiz .wizard-lottie-wrapper {
+        height: 1px;
+        position: relative;
+        padding-bottom: 11.875rem;
+        overflow: hidden;
+      }
+      .theme-wiz .wizard-lottie-wrapper .wizard-lottie {
+        width: 21.25rem;
+        height: auto;
+        -webkit-transform: translateY(-73%);
+        -ms-transform: translateY(-73%);
+        transform: translateY(-73%);
+      }
+    </style>
+    <style>
+      @media (max-width: 1024px) {
+       
+        #webrow {
+          display: none;
+        }
+        #resrow {
+          display: block;
+        }
+        #webm {
+          display: none;
+        }
+        #resm {
+          display: block;
+        }
+        #webb {
+          display: none;
+        }
+        #resb {
+          display: block;
+        }
+        #rmod{
+          max-width:352px !important
+        }
+        }	
+    </style>
+    <style>
+      @media (min-width: 1024px) {
+        #resrow {
+          display: none;
+        }
+        #resm {
+          display: none;
+        }
+        #resb {
+          display: none;
+        }
+        #rmod{
+          max-width:50% !important
+        }
+        }	
+    </style>
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main " id="top" style="background-color: #f5f5f5;">
+      <div class="container-fluid" data-layout="container-fluid">
+        <script>
+          var isFluid = JSON.parse(localStorage.getItem('isFluid'));
+          if (isFluid) {
+            var container = document.querySelector('[data-layout]');
+            container.classList.remove('container');
+            container.classList.add('container-fluid');
+          }
+        </script>
+        <nav class="navbar navbar-light navbar-vertical navbar-expand-xl navbar-inverted bg-white">
+          <script>
+            var navbarStyle = localStorage.getItem("navbarStyle");
+            if (navbarStyle && navbarStyle !== 'transparent') {
+              document.querySelector('.navbar-vertical').classList.add(`navbar-${navbarStyle}`);
+            }
+          </script>
+          <div class="d-flex align-items-center">
+           
+          </div>
+      
+        </nav>
+        <div class="content">
+          <nav class="navbar navbar-light navbar-glass border-bottom navbar-top navbar-expand bg-white">
+
+            <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+           
+          
+           
+          </nav>
+          <!-- <div class="card mt-3" style="background-color: #edf0fd;">
+            <div class="card-body">
+            
+            </div>
+          </div> -->
+          <div class="card mt-3">
+            <div class="card-body">
+              <div class="row flex-between-center pb-1">
+                <div class="col-md">
+                  
+                </div>
+                <div class="col-auto">
+                  <!-- <button class="btn btn-falcon-default btn-sm me-2"  type="button"><i class="bi-reply me-2 pt-1" style="font-size:17px;"></i>MODIFY SEARCH</button> -->
+                  <button class="btn btn-falcon-default btn-sm me-2 mb-2"  id="bms" role="button"><i class="far fa-bookmark me-2 pt-1" style="font-size:17px;"></i>Save Search</button>
+                  
+                  <button class="btn btn-falcon-default btn-sm me-2 mb-2" type="button" id="sbf"><i class="far fa-folder-open me-1" style="font-size:17px;" data-fa-transform="shrink-3 down-2"></i>Saved Search Folder</button>
+                  <!-- <button class="btn btn-falcon-default btn-sm me-2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#min">Hide</button> -->
+                 
+                  <!-- <span class="me-2 ">Total Profiles :</span><span class="display-4 fs-2   fw-normal font-sans-serif" data-countup='{"endValue":5000}'>0</span>  -->
+                </div>
+              </div>
+              <hr>
+              <!--form start-->
+             <form method="GET" action="joblistapi">{% csrf_token %}
+                
+            
+                <div class="row gx-3 mt-3">
+                  <div class="col-lg-3">
+                    <div class="form-group" >
+
+                   
+                      <label for="firstname">Keyword</label>
+                      <input type="text" class="form-control " id="key_123" name="skillsets" placeholder="Keyword / Skills"/>
+         
+                    
+                    </div>
+                  </div>
+                  <div class="col-lg-3 ltn">
+                 
+                  
+                    
+                      <label for="wizard-password">Location</label>
+                      <div class="form-group" >
+                        <select class="form-select test" id="loc23" multiple="multiple" size="1" name="location" >
+                      
+                          
+                          <optgroup label="Andaman &amp; Nicobar Islands">
+
+                            <option value="Port Blair">Port Blair</option>
+
+                            <option value="Mayabunder">Mayabunder</option>
+
+                            <option value="Nicobar">Nicobar</option>
+
+                            <option value="Andaman &amp; Nicobar Islands-other">Andaman &amp; Nicobar Islands-other
+                            </option>
+
+                          </optgroup>
+                          <optgroup label="Andhra Pradesh">
+
+                            <option value="East Godavari"> East Godavari </option>
+
+                            <option value="Eluru"> Eluru </option>
+
+                            <option value="Kadapa "> Kadapa </option>
+
+                            <option value=" Machilipatnam "> Machilipatnam </option>
+
+                            <option value=" Ongole "> Ongole </option>
+
+                            <option value=" Srikakulam "> Srikakulam </option>
+
+                            <option value=" Vijayawada "> Vijayawada </option>
+
+                            <option value=" Visakhapatnam "> Visakhapatnam </option>
+
+                            <option value=" Vizianagaram "> Vizianagaram </option>
+
+                            <option value="Anantapur">Anantapur</option>
+
+                            <option value="Guntakal">Guntakal</option>
+
+                            <option value="Guntur">Guntur</option>
+
+                            <option value="Kakinada">Kakinada</option>
+
+                            <option value="Kurnool">Kurnool</option>
+
+                            <option value="Nellore">Nellore</option>
+
+                            <option value="Rajahmundry">Rajahmundry</option>
+
+                            <option value="Tirupati">Tirupati</option>
+
+                            <option value="Andhra Pradesh -Other">Andhra Pradesh -Other</option>
+                          </optgroup>
+                          <optgroup label="Arunachal Pradesh">
+
+                            <option value="  East Siang  "> East Siang </option>
+
+                            <option value="  Kra Daadi  "> Kra Daadi </option>
+
+                            <option value="  Kurung Kumey  "> Kurung Kumey </option>
+
+                            <option value="  Lohit  "> Lohit </option>
+
+                            <option value="  Lower Dibang Valley  "> Lower Dibang Valley </option>
+
+                            <option value="  Lower Subansiri  "> Lower Subansiri </option>
+
+                            <option value="  Papum Pare  "> Papum Pare </option>
+
+                            <option value="  Siang  "> Siang </option>
+
+                            <option value="  Tirap  "> Tirap </option>
+
+                            <option value="  Upper Siang "> Upper Siang </option>
+
+                            <option value="  West Kameng  "> West Kameng </option>
+
+                            <option value="  West Siang  "> West Siang </option>
+
+                            <option value=" Anjaw "> Anjaw </option>
+
+                            <option value=" Changlang "> Changlang </option>
+
+                            <option value=" Dibang Valley "> Dibang Valley </option>
+
+                            <option value=" East Kameng "> East Kameng </option>
+
+                            <option value=" Itanagar "> Itanagar </option>
+
+                            <option value=" Longding "> Longding </option>
+
+                            <option value=" Lower Siang "> Lower Siang </option>
+
+                            <option value=" Namsai "> Namsai </option>
+
+                            <option value=" Tawang "> Tawang </option>
+
+                            <option value="Arunachal Pradesh -Other">Arunachal Pradesh -Other</option>
+                          </optgroup>
+                          <optgroup label="Assam">
+
+                            <option value="  Morigaon  "> Morigaon </option>
+
+                            <option value="  Nalbari  "> Nalbari </option>
+
+                            <option value="  Sivasagar  "> Sivasagar </option>
+
+                            <option value="  Sonitpur  "> Sonitpur </option>
+
+                            <option value="  South Salmara-Mankachar  "> South Salmara-Mankachar </option>
+
+                            <option value="  Tinsukia  "> Tinsukia </option>
+
+                            <option value="  Udalguri  "> Udalguri </option>
+
+                            <option value="  West Karbi Anglong  "> West Karbi Anglong </option>
+
+                            <option value=" Baksa "> Baksa </option>
+
+                            <option value=" Barpeta "> Barpeta </option>
+
+                            <option value=" Bishwanath "> Bishwanath </option>
+
+                            <option value=" Bongaigaon "> Bongaigaon </option>
+
+                            <option value=" Charaideo "> Charaideo </option>
+
+                            <option value=" Chirang "> Chirang </option>
+
+                            <option value=" Darrang "> Darrang </option>
+
+                            <option value=" Dhemaji "> Dhemaji </option>
+
+                            <option value=" Dhubri "> Dhubri </option>
+
+                            <option value=" Dibrugarh "> Dibrugarh </option>
+
+                            <option value=" Dima Hasao "> Dima Hasao </option>
+
+                            <option value=" Goalpara "> Goalpara </option>
+
+                            <option value=" Golaghat "> Golaghat </option>
+
+                            <option value=" Hailakandi "> Hailakandi </option>
+
+                            <option value=" Hojai "> Hojai </option>
+
+                            <option value=" Jorhat "> Jorhat </option>
+
+                            <option value=" Karbi Anglong "> Karbi Anglong </option>
+
+                            <option value=" Karimganj "> Karimganj </option>
+
+                            <option value=" Kokrajhar "> Kokrajhar </option>
+
+                            <option value=" Lakhimpur "> Lakhimpur </option>
+
+                            <option value=" Majuli "> Majuli </option>
+
+                            <option value=" Nagaon "> Nagaon </option>
+
+                            <option value=" Silchar "> Silchar </option>
+
+                            <option value="Guwahati">Guwahati</option>
+
+                            <option value="Assam -Other">Assam -Other</option>
+                          </optgroup>
+                          <optgroup label="Bihar">
+
+                            <option value="  Jamui  "> Jamui </option>
+
+                            <option value="  Kaimur  "> Kaimur </option>
+
+                            <option value="  Khagaria  "> Khagaria </option>
+
+                            <option value="  Kishanganj  "> Kishanganj </option>
+
+                            <option value="  Lakhisarai  "> Lakhisarai </option>
+
+                            <option value="  Madhepura  "> Madhepura </option>
+
+                            <option value="  Madhubani  "> Madhubani </option>
+
+                            <option value="  Nawada  "> Nawada </option>
+
+                            <option value="  Rohtas  "> Rohtas </option>
+
+                            <option value="  Saharsa  "> Saharsa </option>
+
+                            <option value="  Samastipur  "> Samastipur </option>
+
+                            <option value="  Saran "> Saran </option>
+
+                            <option value="  Sheikhpura  "> Sheikhpura </option>
+
+                            <option value="  Sheohar  "> Sheohar </option>
+
+                            <option value="  Sitamarhi  "> Sitamarhi </option>
+
+                            <option value="  Siwan  "> Siwan </option>
+
+                            <option value="  Supaul  "> Supaul </option>
+
+                            <option value="  Vaishali  "> Vaishali </option>
+
+                            <option value=" Araria "> Araria </option>
+
+                            <option value=" Arrah "> Arrah </option>
+
+                            <option value=" Arwal "> Arwal </option>
+
+                            <option value=" Aurangabad (Bihar) "> Aurangabad (Bihar) </option>
+
+                            <option value=" Banka "> Banka </option>
+
+                            <option value=" Begusarai "> Begusarai </option>
+
+                            <option value=" Bhagalpur "> Bhagalpur </option>
+
+                            <option value=" Biharsharif "> Biharsharif </option>
+
+                            <option value=" Buxar "> Buxar </option>
+
+                            <option value=" Darbhanga "> Darbhanga </option>
+
+                            <option value=" East Champaran "> East Champaran </option>
+
+                            <option value=" Gaya "> Gaya </option>
+
+                            <option value=" Gopalganj "> Gopalganj </option>
+
+                            <option value=" Hajipur "> Hajipur </option>
+
+                            <option value=" Jehanabad "> Jehanabad </option>
+
+                            <option value=" Katihar "> Katihar </option>
+
+                            <option value=" Munger "> Munger </option>
+
+                            <option value=" Muzaffarpur "> Muzaffarpur </option>
+
+                            <option value=" Purnia "> Purnia </option>
+
+                            <option value=" West Champaran"> West Champaran</option>
+
+                            <option value="Patna">Patna</option>
+
+                            <option value="Bihar -Other">Bihar -Other</option>
+                          </optgroup>
+                          <optgroup label="Chandigarh">
+
+                            <option value=" Chandigarh "> Chandigarh </option>
+
+                            <option value=" Chandigarh-other "> Chandigarh-other </option>
+
+                          </optgroup>
+                          <optgroup label="Chhattisgarh">
+
+                            <option value=" Balod "> Balod </option>
+
+                            <option value=" Balrampur (Chattisgarh) "> Balrampur (Chattisgarh) </option>
+
+                            <option value=" Bastar "> Bastar </option>
+
+                            <option value=" Bemetara "> Bemetara </option>
+
+                            <option value=" Bhilai "> Bhilai </option>
+
+                            <option value=" Bijapur(Chattisgarh) "> Bijapur(Chattisgarh) </option>
+
+                            <option value=" Bilaspur "> Bilaspur </option>
+
+                            <option value=" Dantewada "> Dantewada </option>
+
+                            <option value=" Dhamtari "> Dhamtari </option>
+
+                            <option value=" Durg "> Durg </option>
+
+                            <option value=" Gariaband "> Gariaband </option>
+
+                            <option value=" Janjgir-Champa "> Janjgir-Champa </option>
+
+                            <option value=" Jashpur "> Jashpur </option>
+
+                            <option value=" Kabirdham "> Kabirdham </option>
+
+                            <option value=" Kanker "> Kanker </option>
+
+                            <option value=" Kondagaon "> Kondagaon </option>
+
+                            <option value=" Korba "> Korba </option>
+
+                            <option value=" Koriya "> Koriya </option>
+
+                            <option value=" Mahasamund "> Mahasamund </option>
+
+                            <option value=" Mungeli "> Mungeli </option>
+
+                            <option value=" Narayanpur "> Narayanpur </option>
+
+                            <option value=" Raigarh "> Raigarh </option>
+
+                            <option value=" Raipur "> Raipur </option>
+
+                            <option value=" Rajnandgaon "> Rajnandgaon </option>
+
+                            <option value=" Sukma "> Sukma </option>
+
+                            <option value=" Surajpur "> Surajpur </option>
+
+                            <option value=" Surguja "> Surguja </option>
+
+                            <option value="Chhattisgarh -Other">Chhattisgarh -Other</option>
+                          </optgroup>
+                          <optgroup label="Dadra &amp; Nagar Haveli">
+
+                            <option value="  Silvassa  "> Silvassa </option>
+
+                            <option value="  Dadra &amp; Nagar Haveli-other  "> Dadra &amp; Nagar Haveli-other
+                            </option>
+
+                          </optgroup>
+                          <optgroup label="Daman &amp; Diu">
+
+                            <option value="Daman &amp; Diu">Daman &amp; Diu</option>
+
+                            <option value=" Daman &amp; Diu-other "> Daman &amp; Diu-other </option>
+
+                          </optgroup>
+                          <optgroup label="Delhi">
+
+                            <option value="Delhi">Delhi</option>
+                            <option value="Delhi - Other">Delhi - Other</option>
+                          </optgroup>
+                          <optgroup label="Goa">
+
+                            <option value=" Panaji "> Panaji </option>
+
+                            <option value=" South Goa "> South Goa </option>
+
+                            <option value=" Vasco Da Gama "> Vasco Da Gama </option>
+
+                            <option value="Goa -Other">Goa -Other</option>
+                          </optgroup>
+                          <optgroup label="Gujarat">
+
+                            <option value="  Kheda  "> Kheda </option>
+
+                            <option value="  Mehsana  "> Mehsana </option>
+
+                            <option value="  Patan  "> Patan </option>
+
+                            <option value=" Ahmedabad "> Ahmedabad </option>
+
+                            <option value=" Amreli "> Amreli </option>
+
+                            <option value=" Anand "> Anand </option>
+
+                            <option value=" Ankleshwar "> Ankleshwar </option>
+
+                            <option value=" Aravalli "> Aravalli </option>
+
+                            <option value=" Banaskantha "> Banaskantha </option>
+
+                            <option value=" Bharuch "> Bharuch </option>
+
+                            <option value=" Bhavnagar "> Bhavnagar </option>
+
+                            <option value=" Bhuj "> Bhuj </option>
+
+                            <option value=" Botad "> Botad </option>
+
+                            <option value=" Chhota Udaipur "> Chhota Udaipur </option>
+
+                            <option value=" Dahod "> Dahod </option>
+
+                            <option value=" Dang "> Dang </option>
+
+                            <option value=" Devbhoomi Dwarka "> Devbhoomi Dwarka </option>
+
+                            <option value=" Gandhidham "> Gandhidham </option>
+
+                            <option value=" Gandhinagar "> Gandhinagar </option>
+
+                            <option value=" Gir "> Gir </option>
+
+                            <option value=" Godhra "> Godhra </option>
+
+                            <option value=" Jamnagar "> Jamnagar </option>
+
+                            <option value=" Junagadh "> Junagadh </option>
+
+                            <option value=" Kandla "> Kandla </option>
+
+                            <option value=" Mahisagar "> Mahisagar </option>
+
+                            <option value=" Morbi "> Morbi </option>
+
+                            <option value=" Narmada "> Narmada </option>
+
+                            <option value=" Navsari "> Navsari </option>
+
+                            <option value=" Porbandar "> Porbandar </option>
+
+                            <option value=" Rajkot "> Rajkot </option>
+
+                            <option value=" Sabarkantha "> Sabarkantha </option>
+
+                            <option value=" Surat "> Surat </option>
+
+                            <option value=" Surendranagar "> Surendranagar </option>
+
+                            <option value=" Vadodara "> Vadodara </option>
+
+                            <option value=" Valsad "> Valsad </option>
+
+                            <option value=" Vapi "> Vapi </option>
+
+                            <option value="Gujarat -Other">Gujarat -Other</option>
+                          </optgroup>
+                          <optgroup label="Haryana">
+
+                            <option value=" Ambala "> Ambala </option>
+
+                            <option value=" Bhiwani "> Bhiwani </option>
+
+                            <option value=" Chandigarh (Haryana) "> Chandigarh (Haryana) </option>
+
+                            <option value=" Charkhi Dadri "> Charkhi Dadri </option>
+
+                            <option value=" Faridabad "> Faridabad </option>
+
+                            <option value=" Fatehabad "> Fatehabad </option>
+
+                            <option value=" Gurgaon "> Gurgaon </option>
+
+                            <option value=" Hisar "> Hisar </option>
+
+                            <option value=" Jhajjar "> Jhajjar </option>
+
+                            <option value=" Jind "> Jind </option>
+
+                            <option value=" Kaithal "> Kaithal </option>
+
+                            <option value=" Karnal "> Karnal </option>
+
+                            <option value=" Kurukshetra "> Kurukshetra </option>
+
+                            <option value=" Mahendragarh "> Mahendragarh </option>
+
+                            <option value=" Nuh "> Nuh </option>
+
+                            <option value=" Palwal "> Palwal </option>
+
+                            <option value=" Panchkula "> Panchkula </option>
+
+                            <option value=" Panipat "> Panipat </option>
+
+                            <option value=" Rewari "> Rewari </option>
+
+                            <option value=" Rohtak "> Rohtak </option>
+
+                            <option value=" Sirsa "> Sirsa </option>
+
+                            <option value=" Sonipat "> Sonipat </option>
+
+                            <option value=" Yamunanagar "> Yamunanagar </option>
+
+                            <option value="Haryana -Other">Haryana -Other</option>
+                          </optgroup>
+                          <optgroup label="Himachal Pradesh">
+
+                            <option value=" Bilaspur (Himachal Pradesh) "> Bilaspur (Himachal Pradesh) </option>
+
+                            <option value=" Chamba "> Chamba </option>
+
+                            <option value=" Dalhousie "> Dalhousie </option>
+
+                            <option value=" Dharmasala "> Dharmasala </option>
+
+                            <option value=" Hamirpur "> Hamirpur </option>
+
+                            <option value=" Kangra "> Kangra </option>
+
+                            <option value=" Kinnaur "> Kinnaur </option>
+
+                            <option value=" Kulu "> Kulu </option>
+
+                            <option value=" Lahaul and Spiti "> Lahaul and Spiti </option>
+
+                            <option value=" Mandi "> Mandi </option>
+
+                            <option value=" Shimla "> Shimla </option>
+
+                            <option value=" Sirmaur "> Sirmaur </option>
+
+                            <option value=" Solan "> Solan </option>
+
+                            <option value=" Una "> Una </option>
+
+                            <option value="Himachal Pradesh -Other">Himachal Pradesh -Other</option>
+                          </optgroup>
+                          <optgroup label="Jammu &amp; Kashmir">
+
+                            <option value=" Anantnag "> Anantnag </option>
+
+                            <option value=" Badgam "> Badgam </option>
+
+                            <option value=" Bandipora "> Bandipora </option>
+
+                            <option value=" Baramulla "> Baramulla </option>
+
+                            <option value=" Doda "> Doda </option>
+
+                            <option value=" Ganderbal "> Ganderbal </option>
+
+                            <option value=" Jammu "> Jammu </option>
+
+                            <option value=" Kargil "> Kargil </option>
+
+                            <option value=" Kathua "> Kathua </option>
+
+                            <option value=" Kishtwar "> Kishtwar </option>
+
+                            <option value=" Kulgam "> Kulgam </option>
+
+                            <option value=" Kupwara "> Kupwara </option>
+
+                            <option value=" Leh "> Leh </option>
+
+                            <option value=" Poonch "> Poonch </option>
+
+                            <option value=" Pulwama "> Pulwama </option>
+
+                            <option value=" Rajouri "> Rajouri </option>
+
+                            <option value=" Ramban "> Ramban </option>
+
+                            <option value=" Reasi "> Reasi </option>
+
+                            <option value=" Samba "> Samba </option>
+
+                            <option value=" Shopian "> Shopian </option>
+
+                            <option value=" Srinagar "> Srinagar </option>
+
+                            <option value=" Udhampur "> Udhampur </option>
+
+                            <option value="Jammu &amp; Kashmir -Other">Jammu &amp; Kashmir -Other</option>
+                          </optgroup>
+                          <optgroup label="Jharkhand">
+
+                            <option value=" Bokaro "> Bokaro </option>
+
+                            <option value=" Chatra "> Chatra </option>
+
+                            <option value=" Deoghar "> Deoghar </option>
+
+                            <option value=" Dhanbad "> Dhanbad </option>
+
+                            <option value=" Dumka "> Dumka </option>
+
+                            <option value=" Garhwa "> Garhwa </option>
+
+                            <option value=" Giridih "> Giridih </option>
+
+                            <option value=" Godda "> Godda </option>
+
+                            <option value=" Gumla "> Gumla </option>
+
+                            <option value=" Hazaribagh "> Hazaribagh </option>
+
+                            <option value=" Jamshedpur "> Jamshedpur </option>
+
+                            <option value=" Jamtara "> Jamtara </option>
+
+                            <option value=" Khunti "> Khunti </option>
+
+                            <option value=" Koderma "> Koderma </option>
+
+                            <option value=" Latehar "> Latehar </option>
+
+                            <option value=" Lohardaga "> Lohardaga </option>
+
+                            <option value=" Pakur "> Pakur </option>
+
+                            <option value=" Palamu "> Palamu </option>
+
+                            <option value=" Ramgarh "> Ramgarh </option>
+
+                            <option value=" Ranchi "> Ranchi </option>
+
+                            <option value=" Sahibganj "> Sahibganj </option>
+
+                            <option value=" Seraikela Kharsawan "> Seraikela Kharsawan </option>
+
+                            <option value=" Simdega "> Simdega </option>
+
+                            <option value=" West Singhbhum "> West Singhbhum </option>
+
+                            <option value="Jharkhand -Other">Jharkhand -Other</option>
+                          </optgroup>
+                          <optgroup label="Karnataka">
+
+                            <option value="Bagalkote">Bagalkote</option>
+
+                            <option value="Bangalore">Bangalore</option>
+
+                            <option value="Belgaum">Belgaum</option>
+
+                            <option value="Bellary">Bellary</option>
+
+                            <option value="Bidar">Bidar</option>
+
+                            <option value="Bijapur">Bijapur</option>
+
+                            <option value="Chamarajnagar">Chamarajnagar</option>
+
+                            <option value="Chikkaballapur">Chikkaballapur</option>
+
+                            <option value="Chikkamagaluru">Chikkamagaluru</option>
+
+                            <option value="Chitradurga">Chitradurga</option>
+
+                            <option value="Davanagere">Davanagere</option>
+
+                            <option value="Dharwad">Dharwad</option>
+
+                            <option value="Gadag">Gadag</option>
+
+                            <option value="Gulbarga">Gulbarga</option>
+
+                            <option value="Hassan">Hassan</option>
+
+                            <option value="Haveri">Haveri</option>
+
+                            <option value="Hubli">Hubli</option>
+
+                            <option value="Hubli-Dharwad">Hubli-Dharwad</option>
+
+                            <option value="Kodagu">Kodagu</option>
+
+                            <option value="Kolar">Kolar</option>
+
+                            <option value="Koppal">Koppal</option>
+
+                            <option value="Mandya">Mandya</option>
+
+                            <option value="Mangalore">Mangalore</option>
+
+                            <option value="Mysore">Mysore</option>
+
+                            <option value="Raichur">Raichur</option>
+
+                            <option value="Ramanagara">Ramanagara</option>
+
+                            <option value="Shivamogga">Shivamogga</option>
+
+                            <option value="Tumakuru">Tumakuru</option>
+
+                            <option value="Udupi">Udupi</option>
+
+                            <option value="Uttara Kannada">Uttara Kannada</option>
+
+                            <option value="Yadgir">Yadgir</option>
+
+                            <option value="Karnataka -Other">Karnataka -Other</option>
+                          </optgroup>
+                          <optgroup label="Kerala">
+
+                            <option value="Alappuzha">Alappuzha</option>
+
+                            <option value="Idukki">Idukki</option>
+
+                            <option value="Kannur">Kannur</option>
+
+                            <option value="Kasaragod">Kasaragod</option>
+
+                            <option value="Kochi">Kochi</option>
+
+                            <option value="Kollam">Kollam</option>
+
+                            <option value="Kottayam">Kottayam</option>
+
+                            <option value="Kozhikode">Kozhikode</option>
+
+                            <option value="Malappuram">Malappuram</option>
+
+                            <option value="Palakkad">Palakkad</option>
+
+                            <option value="Pathanamthitta">Pathanamthitta</option>
+
+                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+
+                            <option value="Thrissur">Thrissur</option>
+
+                            <option value="Wayanad">Wayanad</option>
+
+                            <option value="Kerala -Other">Kerala -Other</option>
+                          </optgroup>
+                          <optgroup label="Lakshadweep">
+
+                            <option value="Kavaratti">Kavaratti</option>
+
+                            <option value="Lakshadweep">Lakshadweep</option>
+
+                            <option value="Lakshadweep-other">Lakshadweep-other</option>
+
+
+                          </optgroup>
+                          <optgroup label=" Madhya Pradesh">
+
+                            <option value="Agar Malwa">Agar Malwa</option>
+
+                            <option value="Alirajpur">Alirajpur</option>
+
+                            <option value="Anuppur">Anuppur</option>
+
+                            <option value="Ashok Nagar">Ashok Nagar</option>
+
+                            <option value="Balaghat">Balaghat</option>
+
+                            <option value="Barwani">Barwani</option>
+
+                            <option value="Betul">Betul</option>
+
+                            <option value="Bhind">Bhind</option>
+
+                            <option value="Bhopal">Bhopal</option>
+
+                            <option value="Burhanpur">Burhanpur</option>
+
+                            <option value="Chhatarpur">Chhatarpur</option>
+
+                            <option value="Chhindwara">Chhindwara</option>
+
+                            <option value="Damoh">Damoh</option>
+
+                            <option value="Datia">Datia</option>
+
+                            <option value="Dewas">Dewas</option>
+
+                            <option value="Dhar">Dhar</option>
+
+                            <option value="Dindori">Dindori</option>
+
+                            <option value="Guna">Guna</option>
+
+                            <option value="Gwalior">Gwalior</option>
+
+                            <option value="Harda">Harda</option>
+
+                            <option value="Hoshangabad">Hoshangabad</option>
+
+                            <option value="Indore">Indore</option>
+
+                            <option value="Jabalpur">Jabalpur</option>
+
+                            <option value="Jhabua">Jhabua</option>
+
+                            <option value="Katni">Katni</option>
+
+                            <option value="Khandwa (East Nimar)">Khandwa (East Nimar)</option>
+
+                            <option value="Khargone (West Nimar)">Khargone (West Nimar)</option>
+
+                            <option value="Mandla">Mandla</option>
+
+                            <option value="Mandsaur">Mandsaur</option>
+
+                            <option value="Morena">Morena</option>
+
+                            <option value="Narsinghpur">Narsinghpur</option>
+
+                            <option value="Neemuch">Neemuch</option>
+
+                            <option value="Panna">Panna</option>
+
+                            <option value="Raisen">Raisen</option>
+
+                            <option value="Rajgarh">Rajgarh</option>
+
+                            <option value="Ratlam">Ratlam</option>
+
+                            <option value="Rewa">Rewa</option>
+
+                            <option value="Sagar">Sagar</option>
+
+                            <option value="Satna">Satna</option>
+
+                            <option value="Sehore">Sehore</option>
+
+                            <option value="Seoni">Seoni</option>
+
+                            <option value="Shahdol">Shahdol</option>
+
+                            <option value="Shajapur">Shajapur</option>
+
+                            <option value="Sheopur">Sheopur</option>
+
+                            <option value="Shivpuri">Shivpuri</option>
+
+                            <option value="Sidhi">Sidhi</option>
+
+                            <option value="Singrauli">Singrauli</option>
+
+                            <option value="Tikamgarh">Tikamgarh</option>
+
+                            <option value="Ujjain">Ujjain</option>
+
+                            <option value="Umaria">Umaria</option>
+
+                            <option value="Vidisha">Vidisha</option>
+
+                            <option value=" Madhya Pradesh -Other"> Madhya Pradesh -Other</option>
+                          </optgroup>
+                          <optgroup label="Maharashtra">
+
+                            <option value="Ahmednagar">Ahmednagar</option>
+
+                            <option value="Akola">Akola</option>
+
+                            <option value="Amravati">Amravati</option>
+
+                            <option value="Aurangabad">Aurangabad</option>
+
+                            <option value="Beed">Beed</option>
+
+                            <option value="Bhandara">Bhandara</option>
+
+                            <option value="Bhiwandi">Bhiwandi</option>
+
+                            <option value="Buldhana">Buldhana</option>
+
+                            <option value="Chandrapur">Chandrapur</option>
+
+                            <option value="Dhule">Dhule</option>
+
+                            <option value="Gadchiroli">Gadchiroli</option>
+
+                            <option value="Gondia">Gondia</option>
+
+                            <option value="Hingoli">Hingoli</option>
+
+                            <option value="Jalgaon">Jalgaon</option>
+
+                            <option value="Jalna">Jalna</option>
+
+                            <option value="Khopoli">Khopoli</option>
+
+                            <option value="Kolhapur">Kolhapur</option>
+
+                            <option value="Latur">Latur</option>
+
+                            <option value="Malegaon">Malegaon</option>
+
+                            <option value="Mumbai">Mumbai</option>
+
+                            <option value="Nagpur">Nagpur</option>
+
+                            <option value="Nanded">Nanded</option>
+
+                            <option value="Nandurbar">Nandurbar</option>
+
+                            <option value="Nasik">Nasik</option>
+
+                            <option value="Navi Mumbai">Navi Mumbai</option>
+
+                            <option value="Osmanabad">Osmanabad</option>
+
+                            <option value="Palghar">Palghar</option>
+
+                            <option value="Parbhani">Parbhani</option>
+
+                            <option value="Pune">Pune</option>
+
+                            <option value="Ratnagiri">Ratnagiri</option>
+
+                            <option value="Sangli">Sangli</option>
+
+                            <option value="Satara">Satara</option>
+
+                            <option value="Sindhudurg">Sindhudurg</option>
+
+                            <option value="Solapur">Solapur</option>
+
+                            <option value="Wardha">Wardha</option>
+
+                            <option value="Washim">Washim</option>
+
+                            <option value="Yavatmal">Yavatmal</option>
+
+                            <option value="Maharashtra -Other"> Maharashtra -Other</option>
+                          </optgroup>
+                          <optgroup label="Manipur">
+
+                            <option value="Bishnupur">Bishnupur</option>
+
+                            <option value="Chandel">Chandel</option>
+
+                            <option value="Churachandpur">Churachandpur</option>
+
+                            <option value="Imphal">Imphal</option>
+
+                            <option value="Senapati">Senapati</option>
+
+                            <option value="Tamenglong">Tamenglong</option>
+
+                            <option value="Thoubal">Thoubal</option>
+
+                            <option value="Ukhrul">Ukhrul</option>
+
+                            <option value="Manipur -Other"> Manipur -Other</option>
+                          </optgroup>
+                          <optgroup label="Meghalaya">
+
+                            <option value="East Garo Hills">East Garo Hills</option>
+
+                            <option value="East Jaintia Hills">East Jaintia Hills</option>
+
+                            <option value="North Garo Hills">North Garo Hills</option>
+
+                            <option value="Ri Bhoi">Ri Bhoi</option>
+
+                            <option value="Shillong">Shillong</option>
+
+                            <option value="South Garo Hills">South Garo Hills</option>
+
+                            <option value="South West Garo Hills">South West Garo Hills</option>
+
+                            <option value="South West Khasi Hills">South West Khasi Hills</option>
+
+                            <option value="West Garo Hills">West Garo Hills</option>
+
+                            <option value="West Jaintia Hills">West Jaintia Hills</option>
+
+                            <option value="West Khasi Hills">West Khasi Hills</option>
+
+                            <option value="Meghalaya -Other"> Meghalaya -Other</option>
+                          </optgroup>
+                          <optgroup label="Mizoram">
+
+                            <option value="Aizawal">Aizawal</option>
+
+                            <option value="Champhai">Champhai</option>
+
+                            <option value="Kolasib">Kolasib</option>
+
+                            <option value="Lawngtlai">Lawngtlai</option>
+
+                            <option value="Lunglei">Lunglei</option>
+
+                            <option value="Mamit">Mamit</option>
+
+                            <option value="Saiha">Saiha</option>
+
+                            <option value="Serchhip">Serchhip</option>
+
+                            <option value="Mizoram -Other"> Mizoram -Other</option>
+                          </optgroup>
+                          <optgroup label="Nagaland">
+
+                            <option value="Dimapur">Dimapur</option>
+
+                            <option value="Kiphire">Kiphire</option>
+
+                            <option value="kohima">kohima</option>
+
+                            <option value="Longleng">Longleng</option>
+
+                            <option value="Mokokchung">Mokokchung</option>
+
+                            <option value="Mon">Mon</option>
+
+                            <option value="Peren">Peren</option>
+
+                            <option value="Phek">Phek</option>
+
+                            <option value="Tuensang">Tuensang</option>
+
+                            <option value="Wokha">Wokha</option>
+
+                            <option value="Zunheboto">Zunheboto</option>
+
+                            <option value="Nagaland -Other"> Nagaland -Other</option>
+                          </optgroup>
+                          <optgroup label="Orissa">
+
+                            <option value="Angul">Angul</option>
+
+                            <option value="Balangir">Balangir</option>
+
+                            <option value="Balasore">Balasore</option>
+
+                            <option value="Bargarh">Bargarh</option>
+
+                            <option value="Bhadrak">Bhadrak</option>
+
+                            <option value="Bhubaneswar">Bhubaneswar</option>
+
+                            <option value="Boudh">Boudh</option>
+
+                            <option value="Brahmapur">Brahmapur</option>
+
+                            <option value="Cuttack">Cuttack</option>
+
+                            <option value="Debagarh">Debagarh</option>
+
+                            <option value="Dhenkanal">Dhenkanal</option>
+
+                            <option value="Gajapati">Gajapati</option>
+
+                            <option value="Jagatsinghpur">Jagatsinghpur</option>
+
+                            <option value="Jajpur">Jajpur</option>
+
+                            <option value="Jharsuguda">Jharsuguda</option>
+
+                            <option value="Kalahandi">Kalahandi</option>
+
+                            <option value="Kandhamal">Kandhamal</option>
+
+                            <option value="Kendrapara">Kendrapara</option>
+
+                            <option value="Kendujhar">Kendujhar</option>
+
+                            <option value="Khordha">Khordha</option>
+
+                            <option value="Koraput">Koraput</option>
+
+                            <option value="Malkangiri">Malkangiri</option>
+
+                            <option value="Mayurbhanj">Mayurbhanj</option>
+
+                            <option value="Nabarangpur">Nabarangpur</option>
+
+                            <option value="Nayagarh">Nayagarh</option>
+
+                            <option value="Nuapada">Nuapada</option>
+
+                            <option value="Paradeep">Paradeep</option>
+
+                            <option value="Puri">Puri</option>
+
+                            <option value="Rayagada">Rayagada</option>
+
+                            <option value="Rourkela">Rourkela</option>
+
+                            <option value="Sambalpur">Sambalpur</option>
+
+                            <option value="Subarnapur">Subarnapur</option>
+
+                            <option value="Orissa -Other"> Orissa -Other</option>
+                          </optgroup>
+                          <optgroup label="Puducherry">
+
+                            <option value="Karaikal">Karaikal</option>
+
+                            <option value="Mahe">Mahe</option>
+
+                            <option value="Oulgaret">Oulgaret</option>
+
+                            <option value="Pondicherry">Pondicherry</option>
+
+                            <option value="Yanam">Yanam</option>
+
+                            <option value="Puducherry -Other"> Puducherry -Other</option>
+                          </optgroup>
+                          <optgroup label="Punjab">
+
+
+                            <option value="Amritsar">Amritsar</option>
+
+                            <option value="Barnala">Barnala</option>
+
+                            <option value="Bathinda">Bathinda</option>
+
+                            <option value="Chandigarh (Punjab)">Chandigarh (Punjab)</option>
+
+                            <option value="Faridkot">Faridkot</option>
+
+                            <option value="Fatehgarh Sahib">Fatehgarh Sahib</option>
+
+                            <option value="Fazilka">Fazilka</option>
+
+                            <option value="Firozpur">Firozpur</option>
+
+                            <option value="Gurdaspur">Gurdaspur</option>
+
+                            <option value="Hoshiarpur">Hoshiarpur</option>
+
+                            <option value="Jalandhar">Jalandhar</option>
+
+                            <option value="Kapurthala">Kapurthala</option>
+
+                            <option value="Ludhiana">Ludhiana</option>
+
+                            <option value="Mansa">Mansa</option>
+
+                            <option value="Moga">Moga</option>
+
+                            <option value="Mohali">Mohali</option>
+
+                            <option value="Pathankot">Pathankot</option>
+
+                            <option value="Patiala">Patiala</option>
+
+                            <option value="Phagwara">Phagwara</option>
+
+                            <option value="Rupnagar">Rupnagar</option>
+
+                            <option value="Sahibzada Ajit Singh Nagar">Sahibzada Ajit Singh Nagar</option>
+
+                            <option value="Sangrur">Sangrur</option>
+
+                            <option value="Shahid Bhagat Singh Nagar">Shahid Bhagat Singh Nagar</option>
+
+                            <option value="Sri Muktsar Sahib">Sri Muktsar Sahib</option>
+
+                            <option value="Tarn Taran">Tarn Taran</option>
+
+                            <option value="Punjab -Other"> Punjab -Other</option>
+                          </optgroup>
+                          <optgroup label="Rajasthan">
+
+                            <option value="Ajmer">Ajmer</option>
+
+                            <option value="Alwar">Alwar</option>
+
+                            <option value="Banswara">Banswara</option>
+
+                            <option value="Baran">Baran</option>
+
+                            <option value="Barmer">Barmer</option>
+
+                            <option value="Bharatpur">Bharatpur</option>
+
+                            <option value="Bhilwara">Bhilwara</option>
+
+                            <option value="Bhiwadi">Bhiwadi</option>
+
+                            <option value="Bikaner">Bikaner</option>
+
+                            <option value="Bundi">Bundi</option>
+
+                            <option value="Chittorgarh">Chittorgarh</option>
+
+                            <option value="Churu">Churu</option>
+
+                            <option value="Dausa">Dausa</option>
+
+                            <option value="Dholpur">Dholpur</option>
+
+                            <option value="Dungarpur">Dungarpur</option>
+
+                            <option value="Hanumangarh">Hanumangarh</option>
+
+                            <option value="Jaipur">Jaipur</option>
+
+                            <option value="Jaisalmer">Jaisalmer</option>
+
+                            <option value="Jalore">Jalore</option>
+
+                            <option value="Jhalawar">Jhalawar</option>
+
+                            <option value="Jhunjhunu">Jhunjhunu</option>
+
+                            <option value="Jodhpur">Jodhpur</option>
+
+                            <option value="Karauli">Karauli</option>
+
+                            <option value="Kota">Kota</option>
+
+                            <option value="Nagaur">Nagaur</option>
+
+                            <option value="Pali">Pali</option>
+
+                            <option value="Pratapgarh (Rajasthan)">Pratapgarh (Rajasthan)</option>
+
+                            <option value="Rajsamand">Rajsamand</option>
+
+                            <option value="Sawai Madhopur">Sawai Madhopur</option>
+
+                            <option value="Sikar">Sikar</option>
+
+                            <option value="Sirohi">Sirohi</option>
+
+                            <option value="Sri Ganganagar">Sri Ganganagar</option>
+
+                            <option value="Tonk">Tonk</option>
+
+                            <option value="Udaipur">Udaipur</option>
+
+                            <option value="Rajasthan -Other"> Rajasthan -Other</option>
+                          </optgroup>
+                          <optgroup label="Sikkim">
+
+                            <option value="Gangtok">Gangtok</option>
+
+                            <option value="Namchi">Namchi</option>
+
+                            <option value="North Sikkim">North Sikkim</option>
+
+                            <option value="West Sikkim">West Sikkim</option>
+
+                            <option value="Sikkim -Other"> Sikkim -Other</option>
+                          </optgroup>
+                          <optgroup label="Tamil Nadu">
+
+                            <option value="Ambattur">Ambattur</option>
+
+                            <option value="Avadi">Avadi</option>
+
+                            <option value="Chennai">Chennai</option>
+
+                            <option value="Coimbatore">Coimbatore</option>
+
+                            <option value="Cuddalore">Cuddalore</option>
+
+                            <option value="Dharmapuri">Dharmapuri</option>
+
+                            <option value="Dindigul">Dindigul</option>
+
+                            <option value="Erode">Erode</option>
+
+                            <option value="Hosur">Hosur</option>
+
+                            <option value="Karur">Karur</option>
+
+                            <option value="Krishnagiri">Krishnagiri</option>
+
+                            <option value="Krishnagiri">Krishnagiri</option>
+
+                            <option value="Madurai">Madurai</option>
+
+                            <option value="Nagapattinam">Nagapattinam</option>
+
+                            <option value="Nagercoil">Nagercoil</option>
+
+                            <option value="Namakkal">Namakkal</option>
+
+                            <option value="Ooty">Ooty</option>
+
+                            <option value="Perambalur">Perambalur</option>
+
+                            <option value="Pudukkottai">Pudukkottai</option>
+
+                            <option value="Ramanathapuram">Ramanathapuram</option>
+
+                            <option value="Salem">Salem</option>
+
+                            <option value="Sivaganga">Sivaganga</option>
+
+                            <option value="Sivakasi">Sivakasi</option>
+
+                            <option value="Thanjavur">Thanjavur</option>
+
+                            <option value="Tirunalveli">Tirunalveli</option>
+
+                            <option value="Tiruppur">Tiruppur</option>
+
+                            <option value="Tiruvarur">Tiruvarur</option>
+
+                            <option value="Tiruvottiyur">Tiruvottiyur</option>
+
+                            <option value="Trichy/Tiruchirapalli">Trichy/Tiruchirapalli</option>
+
+                            <option value="Tuticorin">Tuticorin</option>
+
+                            <option value="Vellore">Vellore</option>
+
+                            <option value="Viluppuram">Viluppuram</option>
+
+                            <option value="Virudhunagar">Virudhunagar</option>
+
+                            <option value="Tamil Nadu -Other"> Tamil Nadu -Other</option>
+                          </optgroup>
+                          <optgroup label="Telangana">
+
+                            <option value="Adilabad">Adilabad</option>
+
+                            <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+
+                            <option value="Hyderabad">Hyderabad</option>
+
+                            <option value="Jagtial">Jagtial</option>
+
+                            <option value="Jangaon">Jangaon</option>
+
+                            <option value="Jayashankar Bhupalpally">Jayashankar Bhupalpally</option>
+
+                            <option value="Jogulamba Gadwal">Jogulamba Gadwal</option>
+
+                            <option value="Kamareddy">Kamareddy</option>
+
+                            <option value="Karimnagar">Karimnagar</option>
+
+                            <option value="Khammam">Khammam</option>
+
+                            <option value="Komaram Bheem Asifabad">Komaram Bheem Asifabad</option>
+
+                            <option value="Mahabubabad">Mahabubabad</option>
+
+                            <option value="Mahabubnagar">Mahabubnagar</option>
+
+                            <option value="Mancherial">Mancherial</option>
+
+                            <option value="Medak">Medak</option>
+
+                            <option value="Medchal">Medchal</option>
+
+                            <option value="Nagarkurnool">Nagarkurnool</option>
+
+                            <option value="Nalgonda">Nalgonda</option>
+
+                            <option value="Nirmal">Nirmal</option>
+
+                            <option value="Nizamabad">Nizamabad</option>
+
+                            <option value="Rajanna Sircilla">Rajanna Sircilla</option>
+
+                            <option value="Ramagundam">Ramagundam</option>
+
+                            <option value="Sangareddy">Sangareddy</option>
+
+                            <option value="Siddipet">Siddipet</option>
+
+                            <option value="Suryapet">Suryapet</option>
+
+                            <option value="Vikarabad">Vikarabad</option>
+
+                            <option value="Wanaparthy">Wanaparthy</option>
+
+                            <option value="Warangal">Warangal</option>
+
+                            <option value="Yadadri Bhuvanagiri">Yadadri Bhuvanagiri</option>
+
+                            <option value="Telangana -Other"> Telangana -Other</option>
+                          </optgroup>
+                          <optgroup label="Tripura">
+
+                            <option value="Agartala">Agartala</option>
+
+                            <option value="Dhalai">Dhalai</option>
+
+                            <option value="Gomati">Gomati</option>
+
+                            <option value="Khowai">Khowai</option>
+
+                            <option value="North Tripura">North Tripura</option>
+
+                            <option value="Sepahijala">Sepahijala</option>
+
+                            <option value="South Tripura">South Tripura</option>
+
+                            <option value="Unokoti">Unokoti</option>
+
+                            <option value="West Tripura">West Tripura</option>
+
+                            <option value="Tripura -Other"> Tripura -Other</option>
+                          </optgroup>
+                          <optgroup label="Uttar Pradesh">
+
+                            <option value="Agra">Agra</option>
+
+                            <option value="Aligarh">Aligarh</option>
+
+                            <option value="Allahabad">Allahabad</option>
+
+                            <option value="Ambedkar Nagar">Ambedkar Nagar</option>
+
+                            <option value="Amethi">Amethi</option>
+
+                            <option value="Amroha">Amroha</option>
+
+                            <option value="Auraiya">Auraiya</option>
+
+                            <option value="Azamgarh">Azamgarh</option>
+
+                            <option value="Bagpat">Bagpat</option>
+
+                            <option value="Bahraich">Bahraich</option>
+
+                            <option value="Ballia">Ballia</option>
+
+                            <option value="Balrampur">Balrampur</option>
+
+                            <option value="Banaras">Banaras</option>
+
+                            <option value="Banda">Banda</option>
+
+                            <option value="Barabanki">Barabanki</option>
+
+                            <option value="Bareilly">Bareilly</option>
+
+                            <option value="Basti">Basti</option>
+
+                            <option value="Bhadohi">Bhadohi</option>
+
+                            <option value="Bijnor">Bijnor</option>
+
+                            <option value="Budaun">Budaun</option>
+
+                            <option value="Bulandshahr">Bulandshahr</option>
+
+                            <option value="Chandauli">Chandauli</option>
+
+                            <option value="Chitrakoot">Chitrakoot</option>
+
+                            <option value="Deoria">Deoria</option>
+
+                            <option value="Etah">Etah</option>
+
+                            <option value="Etawah">Etawah</option>
+
+                            <option value="Faizabad">Faizabad</option>
+
+                            <option value="Farrukhabad">Farrukhabad</option>
+
+                            <option value="Fatehpur">Fatehpur</option>
+
+                            <option value="Firozabad">Firozabad</option>
+
+                            <option value="Ghaziabad">Ghaziabad</option>
+
+                            <option value="Ghazipur">Ghazipur</option>
+
+                            <option value="Gonda">Gonda</option>
+
+                            <option value="Gorakhpur">Gorakhpur</option>
+
+                            <option value="Hamirpur (Uttar Pradesh)">Hamirpur (Uttar Pradesh)</option>
+
+                            <option value="Hapur">Hapur</option>
+
+                            <option value="Hardoi">Hardoi</option>
+
+                            <option value="Jalaun">Jalaun</option>
+
+                            <option value="Jaunpur">Jaunpur</option>
+
+                            <option value="Jhansi">Jhansi</option>
+
+                            <option value="Kannauj">Kannauj</option>
+
+                            <option value="Kanpur">Kanpur</option>
+
+                            <option value="Kanpur Dehat (Ramabai Nagar)">Kanpur Dehat (Ramabai Nagar)</option>
+
+                            <option value="Kasganj">Kasganj</option>
+
+                            <option value="Kaushambi">Kaushambi</option>
+
+                            <option value="Kushinagar">Kushinagar</option>
+
+                            <option value="Lakhimpur Kheri">Lakhimpur Kheri</option>
+
+                            <option value="Lalitpur">Lalitpur</option>
+
+                            <option value="Loni">Loni</option>
+
+                            <option value="Lucknow">Lucknow</option>
+
+                            <option value="Maharajganj">Maharajganj</option>
+
+                            <option value="Mahoba">Mahoba</option>
+
+                            <option value="Mainpuri">Mainpuri</option>
+
+                            <option value="Mathura">Mathura</option>
+
+                            <option value="Mau">Mau</option>
+
+                            <option value="Meerut">Meerut</option>
+
+                            <option value="Mirzapur">Mirzapur</option>
+
+                            <option value="Moradabad">Moradabad</option>
+
+                            <option value="Muzaffarnagar">Muzaffarnagar</option>
+
+                            <option value="Noida">Noida</option>
+
+                            <option value="Pilibhit">Pilibhit</option>
+
+                            <option value="Pratapgarh">Pratapgarh</option>
+
+                            <option value="Raebareli">Raebareli</option>
+
+                            <option value="Rampur">Rampur</option>
+
+                            <option value="Saharanpur">Saharanpur</option>
+
+                            <option value="Sambhal (Bheem Nagar)">Sambhal (Bheem Nagar)</option>
+
+                            <option value="Sant Kabir Nagar">Sant Kabir Nagar</option>
+
+                            <option value="Shahjahanpur">Shahjahanpur</option>
+
+                            <option value="Shamli">Shamli</option>
+
+                            <option value="Shravasti">Shravasti</option>
+
+                            <option value="Siddharthnagar">Siddharthnagar</option>
+
+                            <option value="Sitapur">Sitapur</option>
+
+                            <option value="Sonbhadra">Sonbhadra</option>
+
+                            <option value="Sultanpur">Sultanpur</option>
+
+                            <option value="Unnao">Unnao</option>
+
+                            <option value="Varanasi">Varanasi</option>
+
+                            <option value="Uttar Pradesh -Other"> Uttar Pradesh -Other</option>
+                          </optgroup>
+                          <optgroup label="Uttarakhand">
+
+                            <option value="Almora">Almora</option>
+
+                            <option value="Bageshwar">Bageshwar</option>
+
+                            <option value="Chamoli">Chamoli</option>
+
+                            <option value="Champawat">Champawat</option>
+
+                            <option value="Dehradun">Dehradun</option>
+
+                            <option value="Garhwal Srinagar">Garhwal Srinagar</option>
+
+                            <option value="Haldwani">Haldwani</option>
+
+                            <option value="Haridwar">Haridwar</option>
+
+                            <option value="Kashipur">Kashipur</option>
+
+                            <option value="Nainital">Nainital</option>
+
+                            <option value="Pithoragarh">Pithoragarh</option>
+
+                            <option value="Roorkee">Roorkee</option>
+
+                            <option value="Rudraprayag">Rudraprayag</option>
+
+                            <option value="Rudrapur">Rudrapur</option>
+
+                            <option value="Tehri Garhwal">Tehri Garhwal</option>
+
+                            <option value="Uttarakhand-other">Uttarakhand-other</option>
+
+                            <option value="Uttarkashi">Uttarkashi</option>
+
+                            <option value="Uttarakhand -Other"> Uttarakhand -Other</option>
+                          </optgroup>
+                          <optgroup label="West Bengal">
+
+                            <option value="Alipurduar">Alipurduar</option>
+
+                            <option value="Asansol">Asansol</option>
+
+                            <option value="Bankura">Bankura</option>
+
+                            <option value="Baranagar">Baranagar</option>
+
+                            <option value="Bardhaman">Bardhaman</option>
+
+                            <option value="Bhatpara">Bhatpara</option>
+
+                            <option value="Birbhum">Birbhum</option>
+
+                            <option value="Cooch Behar">Cooch Behar</option>
+
+                            <option value="Dakshin Dinajpur">Dakshin Dinajpur</option>
+
+                            <option value="Darjeeling">Darjeeling</option>
+
+                            <option value="Durgapur">Durgapur</option>
+
+                            <option value="Gopalpur">Gopalpur</option>
+
+                            <option value="Haldia">Haldia</option>
+
+                            <option value="Hooghly">Hooghly</option>
+
+                            <option value="Howrah">Howrah</option>
+
+                            <option value="Jalpaiguri">Jalpaiguri</option>
+
+                            <option value="Jhargram">Jhargram</option>
+
+                            <option value="Kalimpong">Kalimpong</option>
+
+                            <option value="Kamarhati">Kamarhati</option>
+
+                            <option value="Kharagpur">Kharagpur</option>
+
+                            <option value="Kolkata">Kolkata</option>
+
+                            <option value="Maheshtala">Maheshtala</option>
+
+                            <option value="Maldah">Maldah</option>
+
+                            <option value="Murshidabad">Murshidabad</option>
+
+                            <option value="Nadia">Nadia</option>
+
+                            <option value="North 24 Parganas">North 24 Parganas</option>
+
+                            <option value="Panihati">Panihati</option>
+
+                            <option value="Purba Medinipur">Purba Medinipur</option>
+
+                            <option value="Purulia">Purulia</option>
+
+                            <option value="Siliguri">Siliguri</option>
+
+                            <option value="South 24 Parganas">South 24 Parganas</option>
+
+                            <option value="Uttar Dinajpur">Uttar Dinajpur</option>
+
+                            <option value="West Bengal-other">West Bengal-other</option>
+
+                            <option value="West Bengal -Other"> West Bengal -Other</option>
+                          </optgroup>
+                          <optgroup label="Outside India">
+
+                            <option value="Outside India">Outside India</option>
+                          </optgroup>
+                          
+
+
+
+                        </select>
+                      </div>
+                   
+                  </div>
+                  <div class="col-lg-3 jtn">
+                   
+                    <div class="form-group">
+                      <label for="wizard-email" id="role_label">Job roles</label>
+                      <select class="form-select test" id="role012" multiple="multiple" size="1" name="job_roles" >
+                        
+                        <option value="Accountant"> Accountant </option>
+                          <option value="BPO / Telecaller"> BPO / Telecaller </option>
+                          <option value="Customer Service / Tech Support"> Customer Service / Tech Support </option>
+                          <option value="Engineer (Core, Non-IT)"> Engineer (Core, Non-IT) </option>
+                          <option value="Sales / Marketing Executive"> Sales / Marketing Executive </option>
+                          <option value="IT - Mobile Developer"> IT - Mobile Developer </option>
+                          <option value="IT Software-Engineer"> IT Software-Engineer </option>
+                          <option value="Management Trainee"> Management Trainee </option>
+                          <option value="Mechanic / Fitter / Production"> Mechanic / Fitter / Production </option>
+                          <option value="Retail / Store Executive"> Retail / Store Executive </option>
+                          <option value="Architect"> Architect </option>
+                          <option value="Content Writer"> Content Writer </option>
+                          <option value="Data Entry /Back Office"> Data Entry /Back Office </option>
+                          <option value="Doctor / Physician"> Doctor / Physician </option>
+                          <option value="HR / Admin"> HR / Admin </option>
+                          <option value="IT Hardware Engineer"> IT Hardware Engineer </option>
+                          <option value="Design / Animation"> Design / Animation </option>
+                          <option value="Pharmacist / Medical Rep"> Pharmacist / Medical Rep </option>
+                          <option value="Nurse / Healthcare"> Nurse / Healthcare </option>
+                          <option value="Receptionist/Front Office"> Receptionist/Front Office </option>
+                          <option value="SEO / Social Media"> SEO / Social Media </option>
+                          <option value="Research/JRF/SRF"> Research/JRF/SRF </option>
+                          <option value="Teacher / Trainer"> Teacher / Trainer </option>
+                          <option value="Steward / Hospitality"> Steward / Hospitality </option>
+                          <option value="Delivery Executive"> Delivery Executive </option>
+                          <option value="Chef / Cook"> Chef / Cook </option>
+                          <option value="Beautician / Spa"> Beautician / Spa </option>
+                          <option value="Counsellor"> Counsellor </option>
+                          <option value="Fashion designer"> Fashion designer </option>
+                          <option value="Media / Journalism / Events"> Media / Journalism / Events </option>
+                          <option value="Others"> Others </option>
+                        
+
+
+
+                      </select>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 dgtn">
+                   
+                    <div class="form-group">
+                      <label for="wizard-email">Qualification</label>
+                      <select class="form-select test " id="quali_id" multiple="multiple" size="1" name="degree">
+                      
+                          
+                       
+                        <option value="B.Arch">B.Arch</option>
+                        
+                     
+                        <option value="B.Com">B.Com</option>
+                        
+                     
+                        <option value="B.Pharm">B.Pharm</option>
+                        
+                     
+                        <option value="BA">BA</option>
+                        
+                     
+                        <option value="BBA - BBM">BBA - BBM</option>
+                        
+                     
+                        <option value="BCA">BCA</option>
+                        
+                     
+                        <option value="BDS">BDS</option>
+                        
+                     
+                        <option value="BE - BTech">BE - BTech</option>
+                        
+                     
+                        <option value="BEd">BEd</option>
+                        
+                     
+                        <option value="BHM">BHM</option>
+                        
+                     
+                        <option value="BSc">BSc</option>
+                        
+                     
+                        <option value="BVSc">BVSc</option>
+                        
+                     
+                        <option value="CA">CA</option>
+                        
+                     
+                        <option value="CS">CS</option>
+                        
+                     
+                        <option value="ICWA">ICWA</option>
+                        
+                     
+                        <option value="LLB">LLB</option>
+                        
+                     
+                        <option value="MBBS">MBBS</option>
+                        
+                     
+                        <option value="B.Design">B.Design</option>
+                        
+                     
+                        <option value="B.FashionTech">B.FashionTech</option>
+                        
+                     
+                        <option value="BFA">BFA</option>
+                        
+                     
+                        <option value="BAMS">BAMS</option>
+                        
+                     
+                        <option value="BHMS">BHMS</option>
+                        
+                     
+                        <option value="B.P.Ed">B.P.Ed</option>
+                        
+                     
+                        <option value="B.F.Sc(Fisheries)">B.F.Sc(Fisheries)</option>
+                        
+                     
+                        <option value="BSW">BSW</option>
+                        
+                     
+                        <option value="LLM">LLM</option>
+                        
+                     
+                        <option value="M Phil - Ph.D">M Phil - Ph.D</option>
+                        
+                     
+                        <option value="M.Arch">M.Arch</option>
+                        
+                     
+                        <option value="M.Com">M.Com</option>
+                        
+                     
+                        <option value="M.Pharm">M.Pharm</option>
+                        
+                     
+                        <option value="MA">MA</option>
+                        
+                     
+                        <option value="MBA - PGDM">MBA - PGDM</option>
+                        
+                     
+                        <option value="MCA">MCA</option>
+                        
+                     
+                        <option value="MD">MD</option>
+                        
+                     
+                        <option value="MDS">MDS</option>
+                        
+                     
+                        <option value="ME - MTech">ME - MTech</option>
+                        
+                     
+                        <option value="MEd">MEd</option>
+                        
+                     
+                        <option value="MHM">MHM</option>
+                        
+                     
+                        <option value="MS">MS</option>
+                        
+                     
+                        <option value="MSc">MSc</option>
+                        
+                     
+                        <option value="MSW">MSW</option>
+                        
+                     
+                        <option value="PG Diploma">PG Diploma</option>
+                        
+                     
+                        <option value="MVSc">MVSc</option>
+                        
+                     
+                        <option value="MPEd">MPEd</option>
+                        
+                     
+                        <option value="M.F.Sc(Fisheries)">M.F.Sc(Fisheries)</option>
+                        
+                     
+                        <option value="Diploma">Diploma</option>
+                        
+                     
+                        <option value="Certificate Course (ITI)">Certificate Course (ITI)</option>
+                        
+                     
+                        <option value="Vocational Training">Vocational Training</option>
+                        
+                     
+                        <option value="12th Pass (HSE)">12th Pass (HSE)</option>
+                        
+                     
+                        <option value="10th Pass (SSC)">10th Pass (SSC)</option>
+                        
+                     
+                        <option value="Upto 9th Std">Upto 9th Std</option>
+                        
+                     
+                        <option value="No Education/Schooling">No Education/Schooling</option>
+                      
+    
+                      
+                    </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 mt-3 dptn">
+                  
+                    <div class="form-group" >
+                      <label for="wizard-email">Department</label>
+                      <select class="form-select test " id="quali_dept_id" multiple="multiple" size="1" name="dept">
+                      
+                        
+                        <option value="Aeronautical / Avionics / Aerospace">Aeronautical / Avionics / Aerospace</option>
+                        
+                        <option value="Agricultural / Irrigation">Agricultural / Irrigation</option>
+                        
+                        <option value="Anesthesia (DA)">Anesthesia (DA)</option>
+                        
+                        <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
+                        
+                        <option value="Architecture and Town Planning">Architecture and Town Planning</option>
+                        
+                        <option value="Automobile">Automobile</option>
+                        
+                        <option value="Bio-Informatics">Bio-Informatics</option>
+                        
+                        <option value="Bio-Medical">Bio-Medical</option>
+                        
+                        <option value="Bio-Technology">Bio-Technology</option>
+                        
+                        <option value="Ceramic">Ceramic</option>
+                        
+                        <option value="Chemical">Chemical</option>
+                        
+                        <option value="Child Health">Child Health</option>
+                        
+                        <option value="Civil">Civil</option>
+                        
+                        <option value="Clinical Pathology (DCP)">Clinical Pathology (DCP)</option>
+                        
+                        <option value="Commercial Art/Fine Art/Graphics">Commercial Art/Fine Art/Graphics</option>
+                        
+                        <option value="Computer Science &amp; Engineering">Computer Science &amp; Engineering</option>
+                        
+                        <option value="Electrical &amp; Electronics">Electrical &amp; Electronics</option>
+                        
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        
+                        <option value="Electronics &amp; Communication">Electronics &amp; Communication</option>
+                        
+                        <option value="Electronic Media">Electronic Media</option>
+                        
+                        <option value="Electronics &amp; Instrumentation">Electronics &amp; Instrumentation</option>
+                        
+                        <option value="Environmental Engineering &amp; Technology">Environmental Engineering &amp; Technology</option>
+                        
+                        <option value="Fashion/ Design">Fashion/ Design</option>
+                        
+                        <option value="Food / Bakery/ Food &amp; Beverage /">Food / Bakery/ Food &amp; Beverage /</option>
+                        
+                        <option value="Front Office">Front Office</option>
+                        
+                        <option value="Geo Informatics">Geo Informatics</option>
+                        
+                        <option value="House Keeping">House Keeping</option>
+                        
+                        <option value="Industrial Bio-Technology">Industrial Bio-Technology</option>
+                        
+                        <option value="Industrial Engineering">Industrial Engineering</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Instrumentation &amp; Control System">Instrumentation &amp; Control System</option>
+                        
+                        <option value="Leather Technology">Leather Technology</option>
+                        
+                        <option value="Manufacturing Engineering">Manufacturing Engineering</option>
+                        
+                        <option value="Marine Engineering">Marine Engineering</option>
+                        
+                        <option value="Material Science and Engineering">Material Science and Engineering</option>
+                        
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        
+                        <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                        
+                        <option value="Mineral / Mining">Mineral / Mining</option>
+                        
+                        <option value="Obstetrics &amp; Gynecology(DGO)">Obstetrics &amp; Gynecology(DGO)</option>
+                        
+                        <option value="Ophthalmology (DO)">Ophthalmology (DO)</option>
+                        
+                        <option value="Orthopaedics (D.Ortho)">Orthopaedics (D.Ortho)</option>
+                        
+                        <option value="Otorenolaryngology (DLO)">Otorenolaryngology (DLO)</option>
+                        
+                        <option value="Paper &amp; Pulp Technology">Paper &amp; Pulp Technology</option>
+                        
+                        <option value="Petroleum / Petrochemical">Petroleum / Petrochemical</option>
+                        
+                        <option value="Pharmaceutical Technology">Pharmaceutical Technology</option>
+                        
+                        <option value="Polymer Science &amp; Engineering">Polymer Science &amp; Engineering</option>
+                        
+                        <option value="Printing Technology">Printing Technology</option>
+                        
+                        <option value="Production cum Plant Engineering">Production cum Plant Engineering</option>
+                        
+                        <option value="Production Engineering">Production Engineering</option>
+                        
+                        <option value="Radiology">Radiology</option>
+                        
+                        <option value="Rubber / Plastic">Rubber / Plastic</option>
+                        
+                        <option value="Structural">Structural</option>
+                        
+                        <option value="Sugar Technology">Sugar Technology</option>
+                        
+                        <option value="Textile Technology">Textile Technology</option>
+                        
+                        <option value="Aeronautical / Avionics / Aerospace Engineering">Aeronautical / Avionics / Aerospace Engineering</option>
+                        
+                        <option value="Agricultural / Irrigation Engineering">Agricultural / Irrigation Engineering</option>
+                        
+                        <option value="Applied Electronics">Applied Electronics</option>
+                        
+                        <option value="Architecture Engineering">Architecture Engineering</option>
+                        
+                        <option value="Automobile Engineering">Automobile Engineering</option>
+                        
+                        <option value="Bio-Medical /Bio-Technology Engineering">Bio-Medical /Bio-Technology Engineering</option>
+                        
+                        <option value="Ceramics Engineering">Ceramics Engineering</option>
+                        
+                        <option value="Chemical Engineering">Chemical Engineering</option>
+                        
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        
+                        <option value="Computer Science &amp; Engineering (CSE)">Computer Science &amp; Engineering (CSE)</option>
+                        
+                        <option value="Electrical &amp; Electronics Engineering (EEE)">Electrical &amp; Electronics Engineering (EEE)</option>
+                        
+                        <option value="Electronics &amp; Communication Engineering(ECE)">Electronics &amp; Communication Engineering(ECE)</option>
+                        
+                        <option value="Environmental Engineering">Environmental Engineering</option>
+                        
+                        <option value="Fashion / Design Technology">Fashion / Design Technology</option>
+                        
+                        <option value="Food Technology">Food Technology</option>
+                        
+                        <option value="Industrial Engineering">Industrial Engineering</option>
+                        
+                        <option value="Information Science/Technology (IS/IT)">Information Science/Technology (IS/IT)</option>
+                        
+                        <option value="Instrumentation &amp; Control Engineering">Instrumentation &amp; Control Engineering</option>
+                        
+                        <option value="Manufacturing /Automation Engineering">Manufacturing /Automation Engineering</option>
+                        
+                        <option value="Marine Engineering">Marine Engineering</option>
+                        
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        
+                        <option value="Metallurgical /Materials Engineering">Metallurgical /Materials Engineering</option>
+                        
+                        <option value="Mineral / Mining Engineering">Mineral / Mining Engineering</option>
+                        
+                        <option value="Petroleum / Petrochemical Engineering">Petroleum / Petrochemical Engineering</option>
+                        
+                        <option value="Printing /Paper/Pulp Technology">Printing /Paper/Pulp Technology</option>
+                        
+                        <option value="Production / Plant Engineering">Production / Plant Engineering</option>
+                        
+                        <option value="Rubber /Plastic /Polymer Engineering">Rubber /Plastic /Polymer Engineering</option>
+                        
+                        <option value="Textile /Leather Technology">Textile /Leather Technology</option>
+                        
+                        <option value="Fire Technology &amp; Safety Engineering">Fire Technology &amp; Safety Engineering</option>
+                        
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        
+                        <option value="Electronics &amp; Instrumentation Engineering">Electronics &amp; Instrumentation Engineering</option>
+                        
+                        <option value="Accountancy">Accountancy</option>
+                        
+                        <option value="Arabic">Arabic</option>
+                        
+                        <option value="Bank Management">Bank Management</option>
+                        
+                        <option value="Book Keeping and Accountancy">Book Keeping and Accountancy</option>
+                        
+                        <option value="Business Economics">Business Economics</option>
+                        
+                        <option value="Business Management">Business Management</option>
+                        
+                        <option value="Commerce">Commerce</option>
+                        
+                        <option value="Economics">Economics</option>
+                        
+                        <option value="English">English</option>
+                        
+                        <option value="Folklore Studies">Folklore Studies</option>
+                        
+                        <option value="Geography">Geography</option>
+                        
+                        <option value="Hindi">Hindi</option>
+                        
+                        <option value="History">History</option>
+                        
+                        <option value="Humanities">Humanities</option>
+                        
+                        <option value="Malayalam">Malayalam</option>
+                        
+                        <option value="Philosophy">Philosophy</option>
+                        
+                        <option value="Telugu">Telugu</option>
+                        
+                        <option value="Politics">Politics</option>
+                        
+                        <option value="Bengali">Bengali</option>
+                        
+                        <option value="Tamil">Tamil</option>
+                        
+                        <option value="Kannada">Kannada</option>
+                        
+                        <option value="Film Studies">Film Studies</option>
+                        
+                        <option value="Fashion Designing">Fashion Designing</option>
+                        
+                        <option value="Political Science">Political Science</option>
+                        
+                        <option value="Bio-Chemistry">Bio-Chemistry</option>
+                        
+                        <option value="BioInformatics">BioInformatics</option>
+                        
+                        <option value="Biology">Biology</option>
+                        
+                        <option value="Bio-Physics">Bio-Physics</option>
+                        
+                        <option value="Bio-technology">Bio-technology</option>
+                        
+                        <option value="Agriculture">Agriculture</option>
+                        
+                        <option value="Catering Technology">Catering Technology</option>
+                        
+                        <option value="Chemistry / Applied Chemistry">Chemistry / Applied Chemistry</option>
+                        
+                        <option value="Child Care">Child Care</option>
+                        
+                        <option value="Computer Science">Computer Science</option>
+                        
+                        <option value="Electronics / Applied Electronics">Electronics / Applied Electronics</option>
+                        
+                        <option value="Food Science / Technology">Food Science / Technology</option>
+                        
+                        <option value="Geology">Geology</option>
+                        
+                        <option value="Home Science">Home Science</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Library and Information Science">Library and Information Science</option>
+                        
+                        <option value="Mathematics / Applied Mathematics">Mathematics / Applied Mathematics</option>
+                        
+                        <option value="Microbiology">Microbiology</option>
+                        
+                        <option value="Physics / Applied Physics">Physics / Applied Physics</option>
+                        
+                        <option value="Physiology / Crop Physiology">Physiology / Crop Physiology</option>
+                        
+                        <option value="Plant Science">Plant Science</option>
+                        
+                        <option value="Psychology">Psychology</option>
+                        
+                        <option value="Statistics / Applied Statistics">Statistics / Applied Statistics</option>
+                        
+                        <option value="Zoology / Applied Zoology">Zoology / Applied Zoology</option>
+                        
+                        <option value="Engineering">Engineering</option>
+                        
+                        <option value="Nursing">Nursing</option>
+                        
+                        <option value="Audiology &amp; Speech-Language Pathology">Audiology &amp; Speech-Language Pathology</option>
+                        
+                        <option value="Hospitality &amp; Hotel Administration">Hospitality &amp; Hotel Administration</option>
+                        
+                        <option value="Multimedia &amp; Animation">Multimedia &amp; Animation</option>
+                        
+                        <option value="Media Graphics &amp; Animation">Media Graphics &amp; Animation</option>
+                        
+                        <option value="Visual Communication">Visual Communication</option>
+                        
+                        <option value="Interior Architecture &amp; Design">Interior Architecture &amp; Design</option>
+                        
+                        <option value="Mass Communication &amp; Journalism">Mass Communication &amp; Journalism</option>
+                        
+                        <option value="Graphics &amp; Multimedia">Graphics &amp; Multimedia</option>
+                        
+                        <option value="Cinematography">Cinematography</option>
+                        
+                        <option value="Astrophysics">Astrophysics</option>
+                        
+                        <option value="Fashion Design">Fashion Design</option>
+                        
+                        <option value="Accessory Design">Accessory Design</option>
+                        
+                        <option value="Fashion Communication">Fashion Communication</option>
+                        
+                        <option value="Knitwear Design">Knitwear Design</option>
+                        
+                        <option value="Textile Design">Textile Design</option>
+                        
+                        <option value="Apparel Production">Apparel Production</option>
+                        
+                        <option value="Fine Arts">Fine Arts</option>
+                        
+                        <option value="Biology">Biology</option>
+                        
+                        <option value="Biotechnology">Biotechnology</option>
+                        
+                        <option value="Botany">Botany</option>
+                        
+                        <option value="Chemistry">Chemistry</option>
+                        
+                        <option value="Commerce">Commerce</option>
+                        
+                        <option value="Computer Science">Computer Science</option>
+                        
+                        <option value="Economics">Economics</option>
+                        
+                        <option value="Education">Education</option>
+                        
+                        <option value="English">English</option>
+                        
+                        <option value="History">History</option>
+                        
+                        <option value="Management">Management</option>
+                        
+                        <option value="Mathematics">Mathematics</option>
+                        
+                        <option value="Philosophy">Philosophy</option>
+                        
+                        <option value="Physics">Physics</option>
+                        
+                        <option value="Psychology">Psychology</option>
+                        
+                        <option value="Statistics">Statistics</option>
+                        
+                        <option value="Zoology">Zoology</option>
+                        
+                        <option value="Accountancy">Accountancy</option>
+                        
+                        <option value="Arabic">Arabic</option>
+                        
+                        <option value="Bank Management">Bank Management</option>
+                        
+                        <option value="Book Keeping and Accountancy">Book Keeping and Accountancy</option>
+                        
+                        <option value="Business Economics">Business Economics</option>
+                        
+                        <option value="Business Management">Business Management</option>
+                        
+                        <option value="Commerce">Commerce</option>
+                        
+                        <option value="Economics">Economics</option>
+                        
+                        <option value="English">English</option>
+                        
+                        <option value="Folklore Studies">Folklore Studies</option>
+                        
+                        <option value="Geography">Geography</option>
+                        
+                        <option value="Hindi">Hindi</option>
+                        
+                        <option value="History">History</option>
+                        
+                        <option value="Humanities">Humanities</option>
+                        
+                        <option value="Malayalam">Malayalam</option>
+                        
+                        <option value="Philosophy">Philosophy</option>
+                        
+                        <option value="Telugu">Telugu</option>
+                        
+                        <option value="Politics">Politics</option>
+                        
+                        <option value="Bengali">Bengali</option>
+                        
+                        <option value="Tamil">Tamil</option>
+                        
+                        <option value="Kannada">Kannada</option>
+                        
+                        <option value="Administration">Administration</option>
+                        
+                        <option value="Advertising / Mass Communication">Advertising / Mass Communication</option>
+                        
+                        <option value="Banking &amp; Finance">Banking &amp; Finance</option>
+                        
+                        <option value="Entrepreneurship">Entrepreneurship</option>
+                        
+                        <option value="Executive">Executive</option>
+                        
+                        <option value="General Management">General Management</option>
+                        
+                        <option value="Healthcare / Hospital Management">Healthcare / Hospital Management</option>
+                        
+                        <option value="Human Resources">Human Resources</option>
+                        
+                        <option value="Industrial Management">Industrial Management</option>
+                        
+                        <option value="Information Systems">Information Systems</option>
+                        
+                        <option value="International Business">International Business</option>
+                        
+                        <option value="International Marketing">International Marketing</option>
+                        
+                        <option value="Marketing">Marketing</option>
+                        
+                        <option value="Operations Management">Operations Management</option>
+                        
+                        <option value="Personnel Management">Personnel Management</option>
+                        
+                        <option value="Project Management">Project Management</option>
+                        
+                        <option value="Technology Management">Technology Management</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Banking &amp; Insurance &amp; Finance">Banking &amp; Insurance &amp; Finance</option>
+                        
+                        <option value="Human Resource &amp; Marketing">Human Resource &amp; Marketing</option>
+                        
+                        <option value="Advanced Communication System">Advanced Communication System</option>
+                        
+                        <option value="Advanced Computing">Advanced Computing</option>
+                        
+                        <option value="Advanced Manufacturing Technology">Advanced Manufacturing Technology</option>
+                        
+                        <option value="Aeronautical / Avionics / Aerospace Engineering">Aeronautical / Avionics / Aerospace Engineering</option>
+                        
+                        <option value="Agricultural / Irrigation Engineering">Agricultural / Irrigation Engineering</option>
+                        
+                        <option value="Applied Electronics">Applied Electronics</option>
+                        
+                        <option value="Architecture Engineering">Architecture Engineering</option>
+                        
+                        <option value="Automobile Engineering">Automobile Engineering</option>
+                        
+                        <option value="Bio-Informatics/Bio-Chemistry Engineering">Bio-Informatics/Bio-Chemistry Engineering</option>
+                        
+                        <option value="Bio-Medical /Bio-Technology Engineering">Bio-Medical /Bio-Technology Engineering</option>
+                        
+                        <option value="CAD / CAM">CAD / CAM</option>
+                        
+                        <option value="Ceramic Engineering">Ceramic Engineering</option>
+                        
+                        <option value="Chemical Engineering">Chemical Engineering</option>
+                        
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        
+                        <option value="Communication &amp; Networking">Communication &amp; Networking</option>
+                        
+                        <option value="Computer Science &amp; Engineering">Computer Science &amp; Engineering</option>
+                        
+                        <option value="Electrical &amp; Electronics Engineering">Electrical &amp; Electronics Engineering</option>
+                        
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        
+                        <option value="Electronics &amp; Communication Engineering">Electronics &amp; Communication Engineering</option>
+                        
+                        <option value="Embedded System Technologies">Embedded System Technologies</option>
+                        
+                        <option value="Energy Engineering">Energy Engineering</option>
+                        
+                        <option value="Engineering Design">Engineering Design</option>
+                        
+                        <option value="Environmental Engineering">Environmental Engineering</option>
+                        
+                        <option value="Fashion / Design Technology">Fashion / Design Technology</option>
+                        
+                        <option value="Food Technology">Food Technology</option>
+                        
+                        <option value="Heat Power Engineering">Heat Power Engineering</option>
+                        
+                        <option value="High Voltage Engineering">High Voltage Engineering</option>
+                        
+                        <option value="Industrial Engineering">Industrial Engineering</option>
+                        
+                        <option value="Information Science/Technology">Information Science/Technology</option>
+                        
+                        <option value="Infrastructure Engineering">Infrastructure Engineering</option>
+                        
+                        <option value="Instrumentation &amp; Control Engineering">Instrumentation &amp; Control Engineering</option>
+                        
+                        <option value="Manufacturing /Automation Engineering">Manufacturing /Automation Engineering</option>
+                        
+                        <option value="Marine Engineering">Marine Engineering</option>
+                        
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        
+                        <option value="Mechatronics">Mechatronics</option>
+                        
+                        <option value="Medical Electronics">Medical Electronics</option>
+                        
+                        <option value="Metallurgical /Materials Engineering">Metallurgical /Materials Engineering</option>
+                        
+                        <option value="Micro-Electronics">Micro-Electronics</option>
+                        
+                        <option value="Mineral / Mining Engineering">Mineral / Mining Engineering</option>
+                        
+                        <option value="Multimedia Technology">Multimedia Technology</option>
+                        
+                        <option value="Network Engineering">Network Engineering</option>
+                        
+                        <option value="Optical Communication">Optical Communication</option>
+                        
+                        <option value="Petroleum / Petrochemical Engineering">Petroleum / Petrochemical Engineering</option>
+                        
+                        <option value="Power Systems Engineering">Power Systems Engineering</option>
+                        
+                        <option value="Printing /Paper/Pulp Technology">Printing /Paper/Pulp Technology</option>
+                        
+                        <option value="Product Design &amp; Development">Product Design &amp; Development</option>
+                        
+                        <option value="Production / Plant Engineering">Production / Plant Engineering</option>
+                        
+                        <option value="Quality Engineering &amp; Management">Quality Engineering &amp; Management</option>
+                        
+                        <option value="Refrigeration &amp; Air-Conditioning">Refrigeration &amp; Air-Conditioning</option>
+                        
+                        <option value="Remote Sensing">Remote Sensing</option>
+                        
+                        <option value="Rubber /Plastic /Polymer Engineering">Rubber /Plastic /Polymer Engineering</option>
+                        
+                        <option value="Software Engineering">Software Engineering</option>
+                        
+                        <option value="Structural Engineering">Structural Engineering</option>
+                        
+                        <option value="Systems Engineering and Operations Research">Systems Engineering and Operations Research</option>
+                        
+                        <option value="Textile /Leather Technology">Textile /Leather Technology</option>
+                        
+                        <option value="Thermal Engineering">Thermal Engineering</option>
+                        
+                        <option value="VLSI Design">VLSI Design</option>
+                        
+                        <option value="Wireless Technologies">Wireless Technologies</option>
+                        
+                        <option value="Instrumentation &amp; EIectronics">Instrumentation &amp; EIectronics</option>
+                        
+                        <option value="Software Engineering">Software Engineering</option>
+                        
+                        <option value="Embedded Systems">Embedded Systems</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Computer Science">Computer Science</option>
+                        
+                        <option value="Bio-Chemistry">Bio-Chemistry</option>
+                        
+                        <option value="BioInformatics">BioInformatics</option>
+                        
+                        <option value="Biology">Biology</option>
+                        
+                        <option value="Bio-Physics">Bio-Physics</option>
+                        
+                        <option value="Bio-technology">Bio-technology</option>
+                        
+                        <option value="Agriculture">Agriculture</option>
+                        
+                        <option value="Catering Technology">Catering Technology</option>
+                        
+                        <option value="Chemistry / Applied Chemistry">Chemistry / Applied Chemistry</option>
+                        
+                        <option value="Child Care">Child Care</option>
+                        
+                        <option value="Computer Science">Computer Science</option>
+                        
+                        <option value="Electronics / Applied Electronics">Electronics / Applied Electronics</option>
+                        
+                        <option value="Food Science / Technology">Food Science / Technology</option>
+                        
+                        <option value="Geology">Geology</option>
+                        
+                        <option value="Home Science">Home Science</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Library and Information Science">Library and Information Science</option>
+                        
+                        <option value="Mathematics / Applied Mathematics">Mathematics / Applied Mathematics</option>
+                        
+                        <option value="Microbiology">Microbiology</option>
+                        
+                        <option value="Physics / Applied Physics">Physics / Applied Physics</option>
+                        
+                        <option value="Physiology / Crop Physiology">Physiology / Crop Physiology</option>
+                        
+                        <option value="Plant Science">Plant Science</option>
+                        
+                        <option value="Psychology">Psychology</option>
+                        
+                        <option value="Statistics / Applied Statistics">Statistics / Applied Statistics</option>
+                        
+                        <option value="Zoology / Applied Zoology">Zoology / Applied Zoology</option>
+                        
+                        <option value="Nursing">Nursing</option>
+                        
+                        <option value="Aeronautical / Avionics / Aerospace">Aeronautical / Avionics / Aerospace</option>
+                        
+                        <option value="Agricultural / Irrigation">Agricultural / Irrigation</option>
+                        
+                        <option value="Anesthesia (DA)">Anesthesia (DA)</option>
+                        
+                        <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
+                        
+                        <option value="Architecture and Town Planning">Architecture and Town Planning</option>
+                        
+                        <option value="Automobile">Automobile</option>
+                        
+                        <option value="Bio-Informatics">Bio-Informatics</option>
+                        
+                        <option value="Bio-Medical">Bio-Medical</option>
+                        
+                        <option value="Bio-Technology">Bio-Technology</option>
+                        
+                        <option value="Ceramic">Ceramic</option>
+                        
+                        <option value="Chemical">Chemical</option>
+                        
+                        <option value="Child Health">Child Health</option>
+                        
+                        <option value="Civil">Civil</option>
+                        
+                        <option value="Clinical Pathology (DCP)">Clinical Pathology (DCP)</option>
+                        
+                        <option value="Commercial Art/Fine Art/Graphics">Commercial Art/Fine Art/Graphics</option>
+                        
+                        <option value="Computer Science &amp; Engineering">Computer Science &amp; Engineering</option>
+                        
+                        <option value="Electrical &amp; Electronics">Electrical &amp; Electronics</option>
+                        
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        
+                        <option value="Electronic &amp; Communication">Electronic &amp; Communication</option>
+                        
+                        <option value="Electronic Media">Electronic Media</option>
+                        
+                        <option value="Electronics &amp; Instrumentation">Electronics &amp; Instrumentation</option>
+                        
+                        <option value="Environmental Engineering &amp; Technology">Environmental Engineering &amp; Technology</option>
+                        
+                        <option value="Fashion/ Design">Fashion/ Design</option>
+                        
+                        <option value="Food / Bakery/ Food &amp; Beverage /">Food / Bakery/ Food &amp; Beverage /</option>
+                        
+                        <option value="Front Office">Front Office</option>
+                        
+                        <option value="Geo Informatics">Geo Informatics</option>
+                        
+                        <option value="House Keeping">House Keeping</option>
+                        
+                        <option value="Industrial Bio-Technology">Industrial Bio-Technology</option>
+                        
+                        <option value="Industrial Engineering">Industrial Engineering</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Instrumentation / Control System">Instrumentation / Control System</option>
+                        
+                        <option value="Leather Technology">Leather Technology</option>
+                        
+                        <option value="Manufacturing Engineering">Manufacturing Engineering</option>
+                        
+                        <option value="Marine Engineering">Marine Engineering</option>
+                        
+                        <option value="Material Science and Engineering">Material Science and Engineering</option>
+                        
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        
+                        <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                        
+                        <option value="Mineral / Mining">Mineral / Mining</option>
+                        
+                        <option value="Obstetrics &amp; Gynecology(DGO)">Obstetrics &amp; Gynecology(DGO)</option>
+                        
+                        <option value="Ophthalmology (DO)">Ophthalmology (DO)</option>
+                        
+                        <option value="Orthopaedics (D.Ortho)">Orthopaedics (D.Ortho)</option>
+                        
+                        <option value="Otorenolaryngology (DLO)">Otorenolaryngology (DLO)</option>
+                        
+                        <option value="Paper &amp; Pulp Technology">Paper &amp; Pulp Technology</option>
+                        
+                        <option value="Petroleum / Petrochemical">Petroleum / Petrochemical</option>
+                        
+                        <option value="Pharmaceutical Technology">Pharmaceutical Technology</option>
+                        
+                        <option value="Polymer Science &amp; Engineering">Polymer Science &amp; Engineering</option>
+                        
+                        <option value="Printing Technology">Printing Technology</option>
+                        
+                        <option value="Production cum Plant Engineering">Production cum Plant Engineering</option>
+                        
+                        <option value="Production Engineering">Production Engineering</option>
+                        
+                        <option value="Radiology">Radiology</option>
+                        
+                        <option value="Rubber / Plastic">Rubber / Plastic</option>
+                        
+                        <option value="Structural">Structural</option>
+                        
+                        <option value="Sugar Technology">Sugar Technology</option>
+                        
+                        <option value="Textile Technology">Textile Technology</option>
+                        
+                        <option value="Aeronautical / Avionics / Aerospace">Aeronautical / Avionics / Aerospace</option>
+                        
+                        <option value="Agricultural / Irrigation">Agricultural / Irrigation</option>
+                        
+                        <option value="Applied Electronics and Instrumentation Engineering">Applied Electronics and Instrumentation Engineering</option>
+                        
+                        <option value="Architecture and Town Planning">Architecture and Town Planning</option>
+                        
+                        <option value="Automobile">Automobile</option>
+                        
+                        <option value="Bio-Informatics">Bio-Informatics</option>
+                        
+                        <option value="Bio-Medical">Bio-Medical</option>
+                        
+                        <option value="Bio-Technology">Bio-Technology</option>
+                        
+                        <option value="Ceramic">Ceramic</option>
+                        
+                        <option value="Chemical">Chemical</option>
+                        
+                        <option value="Civil">Civil</option>
+                        
+                        <option value="Computer Science &amp; Engineering">Computer Science &amp; Engineering</option>
+                        
+                        <option value="Electrical &amp; Electronics">Electrical &amp; Electronics</option>
+                        
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        
+                        <option value="Electronic &amp; Communication">Electronic &amp; Communication</option>
+                        
+                        <option value="Electronic Media">Electronic Media</option>
+                        
+                        <option value="Electronics &amp; Instrumentation">Electronics &amp; Instrumentation</option>
+                        
+                        <option value="Environmental Engineering &amp; Technology">Environmental Engineering &amp; Technology</option>
+                        
+                        <option value="Fashion/ Design">Fashion/ Design</option>
+                        
+                        <option value="Food / Bakery/ Food &amp; Beverage">Food / Bakery/ Food &amp; Beverage</option>
+                        
+                        <option value="Front Office">Front Office</option>
+                        
+                        <option value="Geo Informatics">Geo Informatics</option>
+                        
+                        <option value="House Keeping">House Keeping</option>
+                        
+                        <option value="Industrial Bio-Technology">Industrial Bio-Technology</option>
+                        
+                        <option value="Industrial Engineering">Industrial Engineering</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+                        <option value="Instrumentation &amp; Control System">Instrumentation &amp; Control System</option>
+                        
+                        <option value="Leather Technology">Leather Technology</option>
+                        
+                        <option value="Manufacturing Engineering">Manufacturing Engineering</option>
+                        
+                        <option value="Marine Engineering">Marine Engineering</option>
+                        
+                        <option value="Material Science and Engineering">Material Science and Engineering</option>
+                        
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        
+                        <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                        
+                        <option value="Mineral / Mining">Mineral / Mining</option>
+                        
+                        <option value="Petroleum / Petrochemical">Petroleum / Petrochemical</option>
+                        
+                        <option value="Pharmaceutical Technology">Pharmaceutical Technology</option>
+                        
+                        <option value="Polymer Science &amp; Engineering">Polymer Science &amp; Engineering</option>
+                        
+                        <option value="Printing Technology">Printing Technology</option>
+                        
+                        <option value="Production cum Plant Engineering">Production cum Plant Engineering</option>
+                        
+                        <option value="Production Engineering">Production Engineering</option>
+                        
+                        <option value="Radiology">Radiology</option>
+                        
+                        <option value="Rubber / Plastic">Rubber / Plastic</option>
+                        
+                        <option value="Structural">Structural</option>
+                        
+                        <option value="Sugar Technology">Sugar Technology</option>
+                        
+                        <option value="Textile Technology">Textile Technology</option>
+                        
+                        <option value="Zoology / Applied Zoology">Zoology / Applied Zoology</option>
+                        
+                        <option value="Information Technology">Information Technology</option>
+                        
+      
+              
+                      </select>
+                      </div>
+                  </div>
+                  <div class="col-lg-5 mt-3">
+                 
+                    <div class="row gx-3 mt-1">
+                      <label>Year of Passout</label>
+                      <div class="col-lg-6 mb-3">
+                     
+                    
+                      <div class="form-group">
+                        <select class="form-select " id="inside_yop"  name="yop_from" size="1" data-options='{"removeItemButton":true,"placeholder":true}'>
+                          <option value="">From</option>
+                          <option value="2025">2025</option>
+                          <option value="2024">2024</option>
+                          <option value="2023">2023</option>
+                          <option value="2022">2022</option>
+                          <option value="2021">2021</option>
+  
+                          <option value="2020">2020</option>
+                          <option value="2019">2019</option>
+  
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                          
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                       
+                        <select class="form-select " id="to_yop_select"  size="1" name="yop_to" data-options='{"removeItemButton":true,"placeholder":true}'>
+                          <option value="">To</option>
+                          <option value="2025">2025</option>
+                          <option value="2024">2024</option>
+                          <option value="2023">2023</option>
+                          <option value="2022">2022</option>
+                          <option value="2021">2021</option>
+  
+                          <option value="2020">2020</option>
+                          <option value="2019">2019</option>
+  
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                   
+                        </select>
+                       
+                      </div>
+                                          </div>   
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-lg-3 mt-3 istn" id="mf" style="display: none;">
+                    <label for="wizard-email">Institution Location</label>
+                   
+                    <div class="form-group">
+                      <select class="form-select test hidden" id="id_state" size="1" multiple="multiple" name="c_city">
+                        
+                          
+                        <option value="Andaman &amp; Nicobar Islands"> Andaman &amp; Nicobar Islands </option>
+                        
+                        <option value="Andhra Pradesh"> Andhra Pradesh </option>
+                        
+                        <option value="Arunachal Pradesh"> Arunachal Pradesh </option>
+                        
+                        <option value="Assam"> Assam </option>
+                        
+                        <option value="Bihar"> Bihar </option>
+                        
+                        <option value="Chandigarh"> Chandigarh </option>
+                        
+                        <option value="Chhattisgarh"> Chhattisgarh </option>
+                        
+                        <option value="Dadra &amp; Nagar Haveli"> Dadra &amp; Nagar Haveli </option>
+                        
+                        <option value="Daman &amp; Diu"> Daman &amp; Diu </option>
+                        
+                        <option value="Delhi"> Delhi </option>
+                        
+                        <option value="Goa"> Goa </option>
+                        
+                        <option value="Gujarat"> Gujarat </option>
+                        
+                        <option value="Haryana"> Haryana </option>
+                        
+                        <option value="Himachal Pradesh"> Himachal Pradesh </option>
+                        
+                        <option value="Jammu &amp; Kashmir"> Jammu &amp; Kashmir </option>
+                        
+                        <option value="Jharkhand"> Jharkhand </option>
+                        
+                        <option value="Karnataka"> Karnataka </option>
+                        
+                        <option value="Kerala"> Kerala </option>
+                        
+                        <option value="Lakshadweep"> Lakshadweep </option>
+                        
+                        <option value="Madhya Pradesh"> Madhya Pradesh </option>
+                        
+                        <option value="Maharashtra"> Maharashtra </option>
+                        
+                        <option value="Manipur"> Manipur </option>
+                        
+                        <option value="Meghalaya"> Meghalaya </option>
+                        
+                        <option value="Mizoram"> Mizoram </option>
+                        
+                        <option value="Nagaland"> Nagaland </option>
+                        
+                        <option value="Orissa"> Orissa </option>
+                        
+                        <option value="Puducherry"> Puducherry </option>
+                        
+                        <option value="Punjab"> Punjab </option>
+                        
+                        <option value="Rajasthan"> Rajasthan </option>
+                        
+                        <option value="Sikkim"> Sikkim </option>
+                        
+                        <option value="Tamil Nadu"> Tamil Nadu </option>
+                        
+                        <option value="Telangana"> Telangana </option>
+                        
+                        <option value="Tripura"> Tripura </option>
+                        
+                        <option value="Uttar Pradesh"> Uttar Pradesh </option>
+                        
+                        <option value="Uttarakhand"> Uttarakhand </option>
+                        
+                        <option value="West Bengal"> West Bengal </option>
+                        
+                        <option value="Outside India"> Outside India </option>
+                        
+    
+            
+                    </select>
+                    </div>
+                   
+                  </div> 
+                  <div class="col-lg-4 mt-3 cntn" id="mf1" style="display: none;">
+                    <label for="wizard-email">Institution Name</label>
+                    
+                    <div class="form-group">
+
+                      <select class="form-select test" id="id_college" size="1" multiple="multiple" name="collegename">
+                        
+                        
+              
+                      </select>
+                     
+                    	
+                    </div>
+                  </div>
+                  <div class="col-lg-3 mt-3 mtn" id="mf2" style="display: none;">
+                    <label for="wizard-email">Marks</label>
+                    
+                    <div class="form-group">
+                      <select class="form-select test" id="marks" size="1" multiple="multiple" name="marks">
+                      
+                        <option value="Any">Any</option>
+                       <option value="above60">10th/12th/Degree - All Above 60%</option>
+                        <option value="above65">10th/12th/Degree - Between 65% to 70%</option>
+                        <option value="above70">10th/12th/Degree - Between 70% to 75%</option>
+                        <option value="above75">10th/12th/Degree - Between 75% to 80%</option>
+                        <option value="above80">Above 80%</option>
+      
+              
+                      </select>
+                     
+                      		
+                    </div>
+                  </div>
+                  <div class="col-lg-2 mt-3 gtn" id="mf3" style="display: none;">
+                 
+                    <div class="form-group">
+                      <label for="wizard-email">Gender</label><br>
+                      <select class="form-select test" id="gender" multiple='multiple' name="gender">
+                       
+                        <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Any">Any</option>
+              
+                      </select>
+
+
+
+                      	
+                  </div>	
+                  </div>
+                  <div class="col-lg-3 mt-3 jttn" id="mf7" style="display: none;">
+                    <div class="form-group">
+                 
+                      <label for="wizard-email">Job Type</label><br>
+                      <select class="form-select test" id="jt" multiple="multiple" size="1" name="jt">
+                        
+                        <option value="Full Time">Full Time</option>
+                          <option value="Part Time">Part Time</option>
+                          <option value="Internship">Internship</option>
+                          <option value="Work From Home">Work From Home</option>
+              
+                      </select>
+                 </div>	
+                  </div>
+                  <div class="col-lg-3 mt-3" id="mf4" style="display: none;" >
+                 
+                    <div class="row gx-3 mt-1">
+                      <label>Experience</label>
+                      <div class="col-lg-12 mb-3">
+                        <div class="form-group">
+                     
+                          <select class="form-select " id="inside_exp_from"  size="1" name="exp_from" data-options='{"removeItemButton":true,"placeholder":true}'>
+                            <option value="">Select Experience</option>
+                            <option value="0 - 6 Months">0 - 6 Months</option>
+                            <option value="0.5 - 1 Year">0.5 - 1 Year</option>
+                            <option value="1 - 1.5 Years">1 - 1.5 Years</option>
+                            <option value="1.5 - 2 Years">1.5 - 2 Years</option>
+                            <option value="2 - 2.5 Years">2 - 2.5 Years</option>
+                            <option value="2.5 - 3 Years">2.5 - 3 Years</option>
+                            <option value="3 - 3.5 Years">3 - 3.5 Years</option>
+                            <option value="3.5 - 4 Years">3.5 - 4 Years</option>
+                            <option value="4 - 4.5 Years">4 - 4.5 Years</option>
+                            <option value="4.5 - 5 Years">4.5 - 5 Years</option>
+                            <option value="Above 5 Years">Above 5 Years</option>
+
+                  
+                          </select>
+                        </div>
+                
+                    </div>
+                   
+                    </div>
+                  </div>
+                  <div class="col-lg-3 mt-3" id="mf5" style="display: none;">
+                 
+                    <div class="row gx-3 mt-1">
+                      <label>Salary range</label>
+                      <div class="col-lg-12 mb-3">
+                        <div class="form-group" >
+                    
+                          <select class="form-select" id="inside_salary"  size="1" name="salary_from" data-options='{"removeItemButton":true,"placeholder":true}'>
+                            <option value="">Select Salary</option>
+                            <option value="0 - 0.5 Lakh">0 - 0.5 Lakh</option>
+                            <option value="0.5 - 1 Lakh">0.5 - 1 Lakh</option>
+                            <option value="1 - 1.5 Lakhs">1 - 1.5 Lakhs</option>
+                            <option value="1.5 - 2 Lakhs">1.5 - 2 Lakhs</option>
+                            <option value="2 - 2.5 Lakhs">2 - 2.5 Lakhs</option>
+                            <option value="2.5 - 3 Lakhs">2.5 - 3 Lakhs</option>
+                            <option value="3 - 3.5 Lakhs">3 - 3.5 Lakhs</option>
+                            <option value="3.5 - 4 Lakhs">3.5 - 4 Lakhs</option>
+                            <option value="4 - 4.5 Lakhs">4 - 4.5 Lakhs</option>
+                            <option value="4.5 - 5 Lakhs">4.5 - 5 Lakhs</option>
+                            <option value="5 - 5.5 Lakhs">5 - 5.5 Lakhs</option>
+                            <option value="5.5 - 6 Lakhs">5.5 - 6 Lakhs</option>
+                            <option value="Above 6 Lakhs">Above 6 Lakhs</option>
+                           
+                          </select>
+                          </div>
+                
+                    </div>
+                    
+                    </div>
+                  </div>
+                  <div class="col-lg-1 mt-3" id="mf6">
+                     
+                    <button type="submit" class="btn btn-sm" style="background-color: #5271ff;color:#fff;border-radius:0px;margin-top:2.2rem !important">Search</button>
+                  </div>
+                  <div class="col-lg-2 mt-5" id="mas">
+                    <small class="form-text text-muted fs--1"><a id="msd" href="#" style="text-decoration: none;">Advanced Search<i class="ms-1 bi-arrow-right"></i></a></small>
+
+                  </div>
+                  
+                  <div class="col-lg-2 mt-5" id="mf8" style="display: none;">
+                    <small class="form-text text-muted fs--1"><a id="msd2" href="#" style="text-decoration: none;"><i class="me-1 bi-arrow-left"></i>Back to Basic Search</a></small>
+                  </div>
+                </div>
+               
+            
+        
+              </form>
+              <!--form end-->
+              <div class="card mt-3" >
+                <div class="card-body pb-1 pt-2">
+                
+                  <div class="row flex-between-center">
+                    <div class="col-md pt-2 pb-0" id="webm">
+                      <div class="form-check  ">
+                        <input class="form-check-input" id="checkbox-bulk-leads-select" type="checkbox"
+                          data-bulk-select='{"body":"table-recent-leads-body","actions":"table-recent-leads-actions","replacedElement":"table-recent-leads-replace-element"}' />
+                          <label class="form-check-label" for="checkbox-bulk-leads-select">Select All Profiles</label>
+                      </div>
+                    </div>
+                    <div class="col-md pt-2 pb-0" id="resm">
+                      <div class="form-check  ">
+                        <input class="form-check-input" id="checkbox-bulk-purchases-select" type="checkbox"
+                          data-bulk-select='{"body":"table-recent-purchases-body","actions":"table-recent-purchases-actions","replacedElement":"table-recent-purchases-replace-element"}' />
+                          <label class="form-check-label" for="checkbox-bulk-purchases-select">Select All Profiles</label>
+                      </div>
+                    </div>
+                    <div class="col-auto" id="webb">
+                      <!-- <select class="form-select form-select-sm  mb-2" style="width: 30px !important;" id="select-returning-customer-month">
+                        
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="75">75</option>
+                        <option value="100">100</option>
+                       
+                      </select> -->
+                     
+                      <button class="btn btn-falcon-default btn-sm me-lg-2 mb-2" id="download" type="button"><span
+                        class="fas fa-cloud-download-alt me-2" data-fa-transform="shrink-3 down-2"
+                        style="font-size:17px;"></span>Download</button>
+    
+                        <button class="btn btn-falcon-default btn-sm mb-2" id="mailsend" type="button"><span class="far fa-envelope me-2"
+                          data-fa-transform="shrink-3 down-2" style="font-size:17px;"></span>Send Mail</button>
+                          <button class="btn btn-falcon-default btn-sm ms-lg-3 mb-2" id="move_section" type="button" type="button"><span class="far fa-folder me-2"
+                            style="font-size:17px;" data-fa-transform="shrink-3 down-2"></span>Save Profiles</button>
+                            <button class="btn btn-falcon-default btn-sm ms-lg-3 mb-2" id="view_section" type="button" type="button"><span class="far fa-user-circle me-2"
+                              style="font-size:17px;" data-fa-transform="shrink-2 down-2"></span>View Saved Profiles</button>
+                                <div>
+                                  <label>Number of items per page:</label>
+                                  <select id="perpage" class="form-control" name="perpage" onchange="perPageChange($(this).val())">
+                                    <option value="">default</option>
+                                    <option value="2">2</option>
+                                    <option value="5">5</option>
+                                  </select>
+                                  <!-- <button type="submit" value="OK" style="width: 50px; height: 30px;">OK</button> -->
+                                </div>
+                                
+                              
+                                
+                              
+                    </div>
+                    <div class="col-auto" id="resb">
+                      <!-- <select class="form-select form-select-sm  mb-2" style="width: 30px !important;" id="select-returning-customer-month">
+                        
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="75">75</option>
+                        <option value="100">100</option>
+                       
+                      </select> -->
+                     
+                      <button class="btn btn-falcon-default btn-sm me-lg-2 mb-2" id="download1" type="button"><span
+                        class="fas fa-cloud-download-alt me-2" data-fa-transform="shrink-3 down-2"
+                        style="font-size:17px;"></span>Download</button>
+    
+                        <button class="btn btn-falcon-default btn-sm mb-2" id="mailsend1" type="button"><span class="far fa-envelope me-2"
+                          data-fa-transform="shrink-3 down-2" style="font-size:17px;"></span>Send Mail</button>
+                          <button class="btn btn-falcon-default btn-sm ms-lg-3 mb-2" id="move_section1" type="button" type="button"><span class="far fa-folder me-2"
+                            style="font-size:17px;" data-fa-transform="shrink-3 down-2"></span>Save Profiles</button>
+                            <button class="btn btn-falcon-default btn-sm ms-lg-3 mb-2" id="view_section1" type="button" type="button"><span class="far fa-user-circle me-2"
+                              style="font-size:17px;" data-fa-transform="shrink-2 down-2"></span>View Saved Profiles</button>
+                    </div>
+    
+                    
+    
+    
+                  </div>
+                </div>
+              </div>
+          <!--form end-->
+         
+         
+           
+           <div class="row g-0 mt-3" id="webrow"> 
+           <div class="col-lg-9 pe-lg-2 mb-3 paginated" id="table-recent-leads-body" >
+              <!-- No Profiles Found Card Start-->
+ 
+            <div class="list">
+              <!--card start-->
+            {% for job in joblist %}
+              <input type="hidden" value="{{i.firstname}}" id="fname">
+                <div class="card mb-2 tr" id="job_card">
+                  <div class="card-body pb-3 pt-3">
+                          <div class="row gx-8">
+                            <div class="col-lg-1">
+                              <div class="d-flex">
+                                <div class="form-check mb-0">
+                                  <input class="form-check-input" type="checkbox" name="profilecheck"   id="recent-leads-0"
+                                    />
+                                </div>
+                                <div class="file-thumbnail">
+                                 
+                                  <img class="border h-100 w-100 fit-cover rounded-2" src="static/img/team/avatar.png" style="width:70px !important;height:70px !important" alt="">
+                                 
+                               
+                                </div>
+                               
+                              </div>
+  
+                            </div>
+                            <div class="col-lg-10">
+  
+                              <div class="d-flex ">
+                                <div class="d-flex align-items-center">
+                                  <a href="#" target="_blank" style="text-decoration: none;"
+                                    class="font-sans-serif  lh-1 mb-1 fs-1 pe-2 vpa" id="com" style="color: #5271ff;">{{ job.jobname }}</a>
+                                </div>
+                              
+                                <div class="dropdown font-sans-serif btn-reveal-trigger ms-auto">
+                                  <a href="#" target="_blank" class="btn btn-sm vpa"  id="vpb" style="color: #5271ff;background-color:#fff;border-radius:none;border:1px solid #5271ff">View Profile</a>
+                                </div>
+                               
+                              </div>
+                              <div class="d-flex mt-2 align-items-center">
+                                <div class="row fs--1  g-0"
+                                style="color: #091E42;">
+                               
+                                <div class=" col-auto d-flex align-items-center pe-2  me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Experience"><span
+                                    class="bi-briefcase me-2 "></span><span>{{ job.job }}</span></div>
+
+                                    
+                              </div>
+                            
+                              </div>
+                              <div class="d-flex mt-2 align-items-center">
+                                <div class="row fs--1  g-0"
+                                style="color: #091E42;">
+                                <div class=" col-auto d-flex align-items-center pe-2 " data-bs-toggle="tooltip" data-bs-placement="top" title="Degree"><span
+                                  class="bi-book me-2" ></span><span>{{ job.degree }}</span></div>
+                                
+                                
+                             
+                              </div>
+                               
+                              </div>
+                              
+                            
+                            
+  
+                            </div>
+  
+                          </div>
+                          <div class="row mt-2 ">
+                            
+                            <div class="col-lg-12">
+                              <div class="d-flex align-items-center ms-3" >
+                                  <span
+                                  class="badge badge-pill  px-2 mx-1"data-bs-toggle="tooltip"
+                                  data-bs-placement="top" title="Skills"  style="color: #5d5f61;border-radius:4px;background-color: #f5f5f5;padding:5px;font-weight:500">{{ job.location }}</span>
+                                  
+                                </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+            {% endfor %}
+                <!--card end-->
+            </div> 
+           
+            </div>
+            </div>
+            <div class="col-lg-3 ps-lg-2 mb-3">
+              <div class="card" id="con">
+               
+               
+              </div>
+            </div>
+           </div> 
+           <!---responsive row-->
+            </div>
+            <div class="col-lg-12">
+              <ul class="pagination">
+                
+                  {% if joblist.paginator.num_pages > 1 %} 
+                      {% if joblist.has_previous %}
+                          <li><a href="?page={{ joblist.previous_page_number }}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+                      {% else %}
+                          <li class="disabled page-item"><a class="page-link" style="border: 1px solid white;color: #6c757d;"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+                      {% endif %}
+                      
+                      {% if joblist.number|add:'-10' > 1 %}
+                          <li><a href="?page={{ joblist.number|add:'-10' }}">&hellip;</a></li>
+                      {% endif %}
+                      
+                      {% for i in joblist.paginator.page_range %}
+                          {% if joblist.number == i %}
+                              <li class="active"><span>{{ i }} <span class="sr-only"></span></span></li>
+                          {% elif i > joblist.number|add:'-10' and i < joblist.number|add:'10' %}
+                              <li><a href="?page={{ i }}">{{ i }}</a></li>
+                          {% endif %}
+                      {% endfor %}
+                      
+                      {% if joblist.paginator.num_pages > joblist.number|add:'10' %}
+                          <li><a  href="?page={{ joblist.number|add:'10' }}">&hellip;</a></li>
+                      {% endif %}
+                      
+                      {% if joblist.has_next %}
+                          <li><a href="?page={{ joblist.next_page_number }}"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                      {% else %}
+                          <li class="disabled page-item"><a class="page-link" style="border: 1px solid white;color: #6c757d;"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                      {% endif %}
+                  {% endif %}
+                  
+              </ul>
+            </div>
+        </div>
+        
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+    <div class="modal fade modal-fixed-right modal-theme overflow-hidden" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="settings-modal-label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content border-0 vh-100 scrollbar-overlay">
+          <div class="modal-header modal-header-settings bg-shape">
+            <div class="z-index-1 py-1 light">
+              <h5 class="text-white" id="settings-modal-label"> <span class="fas fa-question-circle me-2 fs-0"></span>For any queries</h5>
+            
+            </div>
+            <button class="btn-close btn-close-white z-index-1 mt-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body px-card" id="themeController">
+            <h5 class="fs-0 mb-3">Contact Us</h5>
+           
+         
+           
+            <div class="d-flex ">
+              <div class="d-flex">
+               
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label" for="exampleFormControlTextarea1">Name</label>
+                      <input class="form-control" type="text" autocomplete="on" placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="exampleFormControlTextarea1">Email ID</label>
+                      <input class="form-control" type="email" autocomplete="on" placeholder="Email address" />
+                    </div>
+                    <label class="form-label" for="exampleFormControlTextarea1">Mobile Number</label>
+                    <div class="input-group mb-3">
+                   
+                      <span class="input-group-text" id="basic-addon1">+91</span>
+                      <input class="form-control" type="text" placeholder="Mobile Number" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <label class="form-label" for="exampleFormControlTextarea1">WhatsApp Number</label>
+                    <div class="input-group mb-3">
+                   
+                      <span class="input-group-text" id="basic-addon1">+91</span>
+                      <input class="form-control" type="text" placeholder="WhatsApp Number" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label" for="exampleFormControlTextarea1">Your Queries</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Contact</button>
+                    </div>
+                  </form>
+               
+              </div>
+          
+            </div>
+          
+            
+        
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+<!--warning-->
+
+<!--All alert modals for download, email and moveto features end-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/anchorjs/anchor.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/echarts/echarts.min.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/progressbar/progressbar.min.js"></script>
+    <script src="static/js/flatpickr.js"></script>
+    <script src="vendors/dropzone/dropzone.min.js"></script>
+    <script src="vendors/choices/choices.min.js"></script>
+
+    <script src="vendors/lottie/lottie.min.js"></script>
+    <script src="vendors/validator/validator.min.js"></script>
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/list.js/list.min.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/jquery-3.6.0.js"></script>
+    <script src="static/js/pagination.js"></script>
+    <script src="static/js/fSelect.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        $(function() {
+          window.fs_test = $('.test').fSelect();
+        });
+      })(jQuery);
+      </script>
+     
+      <script>
+        
+        $("#fresher").click(function(){
+          $("#exp1").hide();
+         
+          
+          
+         });
+         $("#exp").click(function(){
+          $("#exp1").show();
+         
+          
+         });
+         $("#msd").click(function(){
+          $("#msd1").hide();
+          $("#msd").hide();
+          $("#mas").hide();
+          $("#mf").show();
+          $("#mf1").show();
+          $("#mf2").show();
+          $("#mf3").show();
+          $("#mf4").show();
+          $("#mf5").show();
+          $("#mf6").show();
+          $("#mf7").show();
+          $("#mf8").show();
+         });
+         $("#msd2").click(function(){
+          $("#msd1").show();
+          $("#msd").show();
+          $("#mas").show();
+          $("#mf").hide();
+          $("#mf1").hide();
+          $("#mf2").hide();
+          $("#mf3").hide();
+          $("#mf4").hide();
+          $("#mf5").hide();
+          $("#mf6").show();
+          $("#mf7").hide();
+          $("#mf8").hide();
+         });
+
+
+         function perPageChange(per_page)
+        {
+            if (location.href.indexOf('per_page=') > 0)
+                url = location.href.replace(/(per_page=)[^\&]+/, '$1' + per_page)
+            else
+            {
+                if (location.href.indexOf('?') > 0)
+                    addStr = '&'
+                else
+                    addStr = '?'
+                addStr += 'per_page=' + per_page
+                url = location.href + addStr
+            }
+            location.href = url;
+        }
+        </script>
+ 
+
+
+   
+
+  </body>
+
+</html>
